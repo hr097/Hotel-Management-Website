@@ -1,4 +1,7 @@
-var image_count=1;
+
+
+
+/*var image_count=1; //? code for image sliders
 
 function changeImage()
 {
@@ -21,6 +24,22 @@ function changeImage()
 }
 
 setInterval(changeImage,3000);
+*/
 
+function showFullImage(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
-  
+function navbar_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function navbar_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+

@@ -12,7 +12,9 @@
 <script src="JS\main.js" type="text/javascript" defer="true"></script>
 <script src="JS\jQUERY\jquery-3.6.0.min.js"></script>
 
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--EXTRA-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--END ICON CSS JS jQUERY-->
 
@@ -32,17 +34,11 @@ body {font-size:16px;}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
 
-body
-{
- background-image: url("IMAGES/image9.jpg");
- background-attachment: fixed;
- background-size:cover;
- background-repeat: no-repeat;
-}
 
 </style>
 </head>
-<body id="body">
+
+<body>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding w3-overflow-hidden" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -53,9 +49,9 @@ body
   <div class="w3-bar-block">
     <a href="#home" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
     <a href="#Roomsfacilities" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Rooms & Facilities</a> 
-    <a href="#booknow" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Book Now</a> 
-    <a href="#aboutcontactus" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">About & Contact us</a>
+    <a href="#booknow" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Book now</a> 
     <a href="#feedback" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Feedback</a> 
+    <a href="#aboutcontactus" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">About & Contact us</a>
     <a href="https://github.com/hr097" onclick="navbar_close()" class="w3-bar-item w3-hover-black" style="color:black;padding-left:50px;margin-top:120px;font-size:0.8em; text-decoration: none;">Developed by S.H.V</a> 
   </div>
 </nav>
@@ -70,18 +66,204 @@ body
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="navbar_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container " style="margin-top:50px" id="showcase">
+    <div id="anim">
+    <h1 class="w3-jumbo mytitle" id="home" style="font-family:Poppins;"><b style="font-size:48px;">Hey , <b style="color:green;"id="user"> User </b><br> <span style="font-size:65px;">Going on Tour...</span><br>  <span style="color:green;font-size:55px;">Don't worry !</span></b></h1>
+    </div>
+    <hr style="width:800px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
+    <h1 class="w3-xxxmedium w3-text-green animate-charcter"><b>"We Provides The Best Hotel Rooms across India."</b></h1>
+   
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding" >
+    <div class="w3-half">
+      <img class="imageborder" src="IMAGES/image5.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+      <img class="imageborder" src="IMAGES/image6.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+      <img class="imageborder" src="IMAGES/image10.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+    </div>
+
+    <div class="w3-half">
+      <img class="imageborder" src="IMAGES/image7.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+      <img class="imageborder" src="IMAGES/image8.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+      <img class="imageborder" src="IMAGES/image9.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Rooms and Facilities -->
+  <div class="w3-container" id="Roomsfacilities" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-Black"><b>Rooms & Facilities</b></h1>
+    <hr style="width:430px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
+     
+    <div class="w3-row-padding" >
+      <div class="w3-half">
+        <img class="imageborder" src="IMAGES/image1.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="IMAGES/image2.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="IMAGES/image3.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+      </div>
+  
+      <div class="w3-half">
+        <img class="imageborder" src="IMAGES/image11.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="IMAGES/image12.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="IMAGES/image13.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+      </div>
+    </div>
+
+  </div>
+  
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="booknow" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Packages </b></h1>
+    <hr style="width:230px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
+    <h3>We are providing Hotel Rooms in variety of Packages Listed Below. Each and every package contains Safe and Clean Rooms with Sufficient Facilities. <span style="color:rgb(8, 133, 25);"> 24 * 7 Hotel Staff Support Available. </span></h3>
+  </div>
+
+  <div class="w3-row-padding">
+
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-grey w3-xlarge w3-padding-32">Silver</li>
+        <li class="w3-padding-16">1 BHK Room</li>
+        <li class="w3-padding-16">24 hours Stay & support</li>
+        <li class="w3-padding-16">NON A.C.</li>
+        <li class="w3-padding-16">Breakfast Included</li>
+        <li class="w3-padding-16">20% Discount on Advance Booking</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-orange w3-xlarge w3-padding-32">Gold</li>
+        <li class="w3-padding-16">2 BHK Room</li>
+        <li class="w3-padding-16">48 hours Stay & support</li>
+        <li class="w3-padding-16">A.C.</li>
+        <li class="w3-padding-16">Breakfast & Dinner Included</li>
+        <li class="w3-padding-16">30% Discount on Advance Booking</li>
+        <li class="w3-padding-16">
+          <h2>$ 399</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-light-blue w3-xlarge w3-padding-32">Delux</li>
+        <li class="w3-padding-16">4 BHK Room</li>
+        <li class="w3-padding-16"> 72 hours Stay & support</li>
+        <li class="w3-padding-16">A.C. & Heater</li>
+        <li class="w3-padding-16">Breakfast & Lunch & Dinner Included</li>
+        <li class="w3-padding-16">25% Discount on Advance Booking</li>
+        <li class="w3-padding-16">
+          <h2>$ 649</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-light-green w3-xlarge w3-padding-32">Platinum</li>
+        <li class="w3-padding-16">4 BHK Room with Gym Swimming Pool & Garden</li>
+        <li class="w3-padding-16">  1 Week Stay & support</li>
+        <li class="w3-padding-16">A.C. & Heater & Electronics Component</li>
+        <li class="w3-padding-16">Breakfast & Lunch & Dinner & Fast food Included</li>
+        <li class="w3-padding-16">20% Discount on Advance Booking</li>
+        <li class="w3-padding-16">
+          <h2>$ 1099</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Feedback -->
+  
+  <div class="w3-container" id="feedback" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Feedback</b></h1>
+    <hr style="width:230px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
+    <h3>We are very Happy that You are writing to us , We are taking our Customer's Feedback very Seriously so ,<span style="color:rgb(43, 143, 60);"> Please Tell us About Our Services So that We can make it Better to Improve Your Next Stay.</span></h3>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <br>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Send</button>
+    </form>  
+  </div>
+
+  <!-- About us & Contact -->
+  
+  <div class="w3-container" id="aboutcontactus" style="margin-top:75px" >
+    <h1 class="w3-xxxlarge w3-text-black"><b>About & Contact Us</b></h1>
+    <br>
+    <hr style="width:470px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
+    
+    <div class="w3-padding-50 w3-content w3-text-black" id="contact">
+      <hr style="width:200px" class="w3-opacity">
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Texas, US</p>
+        <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +971 972151515</p>
+        <p><i class="fa fa-envelope fa-fw w3-black-white w3-xxlarge w3-margin-right"> </i> Email: hotelparadise@gmail.com</p>
+      </div>
+    </div>
+    <footer class="w3-content w3-padding-64 w3-text-black w3-xxxlarge" align="center">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <br>
+      <p class="w3-medium animate-charcter2">©️ Copyright 2022 . S.H.V. <a href="https://hr097.github.io" target="_blank" class="w3-hover-text-green"></a></p>
+    <!-- End footer -->
+      </footer>
+  </div>
+
+<!-- End page content -->
+</div>
 <script>
 
 // Script to open and close sidebar
-function navbar_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function navbar_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+
+
 
 </script>
 
