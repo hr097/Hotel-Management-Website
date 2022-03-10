@@ -1,26 +1,26 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+var image_count=1;
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function changeImage()
+{
+  let Images = [
+    "IMAGES/image6.jpg",
+    "IMAGES/image5.jpg",
+    "IMAGES/image3.jpg",
+    "IMAGES/image2.jpg",
+    "IMAGES/image1.jpg",
+    "IMAGES/image.jpg",
+    "IMAGES/image.jpg",
+    "IMAGES/image.jpg",
+    "IMAGES/image.jpg",
+  ];
+
+  document.getElementById("body").style.backgroundImage = "url('"+Images[image_count]+ "')";
+  image_count++;
+  if(image_count==9)
+  image_count=0;
 }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+setInterval(changeImage,3000);
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
+
+  
