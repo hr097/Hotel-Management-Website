@@ -1,3 +1,5 @@
+var packageName="";
+
 function navbar_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";

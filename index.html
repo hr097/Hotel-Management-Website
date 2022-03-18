@@ -16,17 +16,11 @@
 </style>
 </head>
 <body onload="focusElem()">
-<!-- <h2>Weekly Coding Challenge #1: Sign in/up Form</h2> -->
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="#">
 			<img src="IMAGES/hotel-paradise.png" style="margin-bottom:-30px;" alt="Hotel Paradise" class="hotel-icon">
 			<h2 style="margin-bottom: 10px;">Create account now</h2>
-			<!-- <div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div> -->
 			<span style="font-size: 0.55em;color:green;margin-bottom:20px;"> And get best hotel rooms booked across India  !</span>
 			<input type="text" placeholder="Name" id="Name" autocomplete="on" autofocus="true" required/>
 			<input type="email" placeholder="Email" autocomplete="on" id="Email_signup" required/>
@@ -39,15 +33,14 @@
 		<form action="#">
 			<img src="IMAGES/hotel-paradise.png" alt="Hotel Paradise" class="hotel-icon">
 			<h1>Sign in</h1>
-			<!-- <div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div> -->
 			<span style="font-size:0.65em;margin-bottom:20px;">to use your account</span>
 			<input type="email" placeholder="Email" autcomplete="on" id="Email_signin" autofocus="true" required/>
 			<input type="password" placeholder="Password" autcomplete="on" id="Password_signin" required/>
-			<a  style="margin-bottom:25px;margin-top:25px;" href="HTML/forgot-creditionals.html" target="_self">Forgot your Email/Password ?</a>
+			<div style="display: inline-block;">
+			<input style="margin-left:-10px;height:12px;width:12px;" type="checkbox"id="remember-me"/>
+			<a style="font-size:2.4vh;">Remember me</a>
+			</div>
+			<a style="margin-bottom:25px;margin-top:10px;font-size:0.45em" href="HTML/forgot-creditionals.html" target="_self">Forgot your Email/Password ?</a>
 			<button type ="button" onclick="getAccount()">Sign In</button>
 			<h6 id="invalid-id-password"></h6>
 		</form>
@@ -70,14 +63,6 @@
 	</div>
 </div>
 
-<!-- <footer>
-	<p>
-		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-		- Read how I created this and how you can join the challenge
-		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
-	</p>
-</footer> -->
 </body>
 <script type="text/javascript">
 

@@ -18,12 +18,31 @@ signInButton.addEventListener('click', () => {
 	
 //FUNCTIONS
 
+function checkCookies() 
+ {
+     if(document.cookie.includes("Email")&&document.cookie.includes("Password"))
+     {   
+         return true;
+     }
+     else
+     return false;
+ }
+ 
+ function setCookies(key,value)
+ {   
+        //  let Email = document.getElementById("Email_signin").value;
+        //  let Password = document.getElementById("Password_signin").value;
+        //  document.cookie = `Email=${Email};Password=${Password}`;
+
+		 document.cookie =`${key}=${value}`;
+ }
+
 function makeFieldEmpty(textField)
 {
 	textField.value="";
 }
 
-function focusElem()
+function SignInReq()
 {
 	if(container.classList.contains("right-panel-active"))
 	{	
@@ -41,8 +60,30 @@ function focusElem()
 		makeFieldEmpty(document.getElementById("Password_signup"));
 		makeFieldEmpty(document.getElementById("Email_signin"));
 		makeFieldEmpty(document.getElementById("Password_signin"));
-
+		document.getElementById("remember-me").checked=false;
 }
+function focusElem()
+{   
+    
+    // let Prom = new Promise((resolve, reject) => {
+	// 	 checkCookies();
+	//   }); 
+
+	// let result = await Prom;
+
+	    let myPromise = new Promise(function(Okay,Requested) {
+			if(checkCookies())
+			Okay();  // when cookies are there
+			else
+			Requested(); // when cookies are not there
+		});
+			
+		myPromise.then(
+			function(error) { window.open('HTML/home.html','_self'); },
+			SignInReq
+		  );
+}
+
 function makeFieldEmpty(textField)
 {
 	textField.value="";
@@ -192,8 +233,11 @@ function resetAccount()
 	}
 }
 
+
 function getAccount()
 {   
+
+
 	if(document.getElementById("Email_signin").value==""||document.getElementById("Password_signin").value=="")
 	{    
 		let count=0;
@@ -217,6 +261,12 @@ function getAccount()
 		let password=localStorage.getItem("Password");
         if(email==document.getElementById("Email_signin").value&&password==document.getElementById("Password_signin").value)
 		{   
+
+			if(document.getElementById("remember-me").checked==true) // set cookies
+			{
+				setCookies("Email",document.getElementById("Email_signin").value);
+				setCookies("Password",document.getElementById("Password_signin").value);
+			}
 			window.open('HTML/home.html','_self');
 		}
 		else

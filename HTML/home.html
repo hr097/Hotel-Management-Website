@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="..\CSS\home.css"><!--CSS-->
 <script src="..\JS\home.js" type="text/javascript" defer="true"></script><!--JS-->
-
+<script src="..\JS\jQUERY\jquery-3.6.0.min.js"></script> <!--jQuery -->
 
 <style>
 @font-face 
@@ -41,6 +41,31 @@ body
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
 .mySlides {display:none;border:5px inset rgb(98, 96, 96);}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+  #Roomsfacilities
+  {
+    
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #Roomsfacilities
+  {
+
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #Roomsfacilities
+  {
+   
+  }
+} 
 </style>
 
 </head>
@@ -52,23 +77,22 @@ body
     <div class="circle two"></div>
     <div class="circle three"></div>
   </div>
-  <center><h1 class="animation-caption slideUp">  Signing you in...</h1></center>
+  <center><h1 class="animation-caption slideUp">Signing you in...</h1></center>
 
   <div id="actual-body">
 
   <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding w3-overflow-hidden" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="navbar_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><img style="height:30;width:30px;margin:auto;" src="../IMAGES/close_icon_2.png" alt="Close Menu"></a>
-  <div class="w3-container">
-    <h3 class="w3-padding-10"><b><img src="../IMAGES/hotel-paradise.png" height="220px" width="230px" alt=""></b></h3>
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding w3-overflow-hidden" style="z-index:3;width:300px;font-weight:bold;overflow:hidden;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="navbar_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><img  style="height:30;width:30px;margin:auto;" src="../IMAGES/close_icon.png" alt="Close Menu"></a>
+  <div class="w3-container" >
+    <h3 class="w3-padding-10"><b><img style="margin-left:-10px;" src="../IMAGES/hotel-paradise.png"  height="250px" width="250px" alt=""></b></h3>
   </div>
-  <div class="w3-bar-block">
+  <div class="w3-bar-block" style="font-size:1.3em;">
     <a href="#home" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
     <a href="#Roomsfacilities" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Rooms & Facilities</a> 
     <a href="#booknow" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Book now</a> 
     <a href="#feedback" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Feedback</a> 
     <a href="#aboutcontactus" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">About & Contact us</a>
-    <a href="https://github.com/hr097" onclick="navbar_close()" class="w3-bar-item w3-hover-black" style="color:black;padding-left:30px;margin-top:120px;font-size:0.8em; text-decoration: none;">Developed by Winter & Stark</a> 
   </div>
 </nav>
 
@@ -82,14 +106,18 @@ body
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="navbar_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<div class="w3-main" style="margin-left:340px;margin-right:40px;">
 
   <!-- Header -->
-  <div class="w3-container" style="margin-top:50px" id="anim">
+  <div class="w3-container" style="margin-top:50px;">
     <div id="anim">
-    <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="font-size:55px;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span style="font-size:55px;">Planning for Tour ,</span><br><span style="font-size:55px;">Don't worry !</span> </b></h1>
+    <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="font-size:55px;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span style="font-size:55px;">Planning for Tour ,</span><br><span style="font-size:55px;">Don't worry !</span></b></h1>
     </div>
-  </div> 
+    <span style="display:inline-block;float:right;margin-top:-40px;" class="fade-in" >
+      <img src="../IMAGES/idea.png" alt="" id="dashboard-image">
+    </span>
+
+  </div>
   <center><h1 class="w3-xxxmedium animate-charcter"><b style="margin:auto;" >" We Provides The Best Hotel Rooms across India "</b></h1></center>
   
   <!-- <hr style="width:1050px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black">  -->
@@ -100,13 +128,13 @@ body
     <img class="mySlides" src="../IMAGES/image6.jpg" style="width:100%">
     <img class="mySlides" src="../IMAGES/image10.jpg" style="width:100%">
     <img class="mySlides" src="../IMAGES/image14.jpg" style="width:100%">
-    <!-- <img class="mySlides" src="../IMAGES/image7.jpg" style="width:100%"> -->
-    <!-- <img class="mySlides" src="../IMAGES/image7.jpg" style="width:100%"-->
+    <img class="mySlides" src="../IMAGES/image15.jpg" style="width:100%">
+    <img class="mySlides" src="../IMAGES/image16.jpg" style="width:100%">
   </div>
-  <br><br><br><br><br>
+
 
   <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:25px" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
@@ -115,7 +143,7 @@ body
   </div>
 
   <!-- Rooms and Facilities -->
-  <div class="w3-container" id="Roomsfacilities" style="margin-top:75px">
+  <div class="w3-container" id="Roomsfacilities" style="margin-top:200px">
     <h1 class="w3-xxxlarge w3-text-Black"><b>Rooms & Facilities</b></h1>
     <hr style="width:430px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
      
@@ -141,7 +169,7 @@ body
     <hr style="width:230px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
     <h3 style="font-family:'SF Pro';">We are providing Hotel Rooms in variety of Packages Listed Below. Each and every package contains Safe and Clean Rooms with Sufficient Facilities. <span style="font-weight:bold;color:rgb(8, 133, 25);"> 24 * 7 Hotel Staff Support Available. </span></h3>
   </div>
-
+   <br>
   <div class="w3-row-padding">
 
     <div class="w3-half w3-margin-bottom">
@@ -157,7 +185,7 @@ body
           <span class="w3-opacity">per room</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+          <button type="button" id="Silver" class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
         </li>
       </ul>
     </div>
@@ -175,7 +203,7 @@ body
           <span class="w3-opacity">per room</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+          <button type="button"  id="Gold" class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
         </li>
       </ul>
     </div>
@@ -193,7 +221,7 @@ body
           <span class="w3-opacity">per room</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+          <button type="button" id="Delux" class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
         </li>
       </ul>
     </div>
@@ -201,7 +229,7 @@ body
     <div class="w3-half">
       <ul class="w3-ul w3-light-grey w3-center">
         <li class="w3-light-green w3-xlarge w3-padding-32">Platinum</li>
-        <li class="w3-padding-16">4 BHK Room with Gym Swimming Pool & Garden</li>
+        <li class="w3-padding-16">4 BHK Room & All Facilities</li>
         <li class="w3-padding-16">  1 Week Stay & support</li>
         <li class="w3-padding-16">A.C. & Heater & Electronics Component</li>
         <li class="w3-padding-16">Breakfast & Lunch & Dinner & Fast food Included</li>
@@ -211,7 +239,7 @@ body
           <span class="w3-opacity">per room</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
+          <button type="button" id="Platinum" class="w3-button w3-green w3-padding-large w3-hover-black">Book & Pay</button>
         </li>
       </ul>
     </div>
@@ -222,7 +250,7 @@ body
   <div class="w3-container" id="feedback" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-black"><b>Feedback</b></h1>
     <hr style="width:230px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
-    <h3 style="font-family:'SF Pro';">We are very Happy that You are writing to us , We are taking our Customer's Feedback very Seriously so ,<span style="font-weight:bold;color:rgb(43, 143, 60);"> Please Tell us About Our Services So that We can make it Better to Improve Your Next Stay.</span></h3>
+    <h3 style="font-family:'SF Pro';">We are very Happy that You are writing to us , We are taking our Customer's Feedback very Seriously so ,<span> Please Tell us About Our Services So that We can make it Better to Improve Your Next Stay.</span></h3>
     <form>
       <div class="w3-section">
         <label>Name</label>
@@ -257,7 +285,7 @@ body
         <p><i class="fa fa-envelope fa-fw w3-black-white w3-xxlarge w3-margin-right"> </i> Email: hotelparadise@gmail.com</p>
       </div>
     </div>
-    <footer class="w3-content w3-padding-64 w3-text-black w3-xxxlarge" align="center">
+    <footer class="w3-content w3-padding-0 w3-text-black w3-xxxlarge" align="center">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
       <i class="fa fa-snapchat w3-hover-opacity"></i>
@@ -265,7 +293,7 @@ body
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
       <br>
-      <p class="w3-medium animate-charcter2">©️ Copyright 2022 Winter & Stark<a href="https://hr097.github.io" target="_blank" class="w3-hover-text-green"></a></p>
+      <a href="https://hr097.github.io" target="_blank" class="w3-hover-text-green"><p class="w3-medium animate-charcter2">©️ Copyright 2022 Winter & Stark</p></a>
     <!-- End footer -->
       </footer>
   </div>
@@ -291,7 +319,11 @@ body
     },4000);
 	  
   }
-  
+
+  $("button").click(function(packageName){
+    packageName = $(this);
+  });
+  alert(packageName);
 </script>
 <noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
 </body>

@@ -67,8 +67,8 @@
     color:rgb(0, 0, 0);
     font-family:"SF pro";
     margin:auto;
-    margin:auto;
     margin-top:410px;
+    margin-left: -20px;
   }
   
   .slide-effect {
@@ -137,6 +137,66 @@
   border:5px solid black;
 }
  
+#dashboard-image
+{
+  max-width:390px;
+  min-width:390px;
+  min-height:420px;
+  max-height:420px;
+}
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+
+}
 
 #anim{
     display: inline-block;
@@ -144,10 +204,10 @@
     white-space: nowrap;
   }
   #anim:first-of-type{
-    animation: appear 10s 1;
+    animation: appear 0s 1;
   }
   #anim:last-of-type{
-    animation: reveal 8s 1;
+    animation: reveal 6s 1;
   }
   #anim:last-of-type span{
 
