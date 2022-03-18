@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="..\CSS\home.css"><!--CSS-->
 <script src="..\JS\home.js" type="text/javascript" defer="true"></script><!--JS-->
 
+
 <style>
 @font-face 
 {
@@ -89,7 +90,8 @@ body
     <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="font-size:55px;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span style="font-size:55px;">Planning for Tour ,</span><br><span style="font-size:55px;">Don't worry !</span> </b></h1>
     </div>
   </div> 
-  <center><h1 style="margin:auto;" class="w3-xxxmedium w3-text-green animate-charcter"><b>" We Provides The Best Hotel Rooms across India "</b></h1></center>
+  <center><h1 class="w3-xxxmedium animate-charcter"><b style="margin:auto;" >" We Provides The Best Hotel Rooms across India "</b></h1></center>
+  
   <!-- <hr style="width:1050px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black">  -->
   <div class="w3-content w3-section" style="max-width:1050px;max-height:500px;">
     <img class="mySlides" src="../IMAGES/image8.jpg" style="width:100%">
@@ -102,7 +104,16 @@ body
     <!-- <img class="mySlides" src="../IMAGES/image7.jpg" style="width:100%"-->
   </div>
   <br><br><br><br><br>
-  
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
   <!-- Rooms and Facilities -->
   <div class="w3-container" id="Roomsfacilities" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-Black"><b>Rooms & Facilities</b></h1>
