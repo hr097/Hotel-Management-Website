@@ -4,47 +4,62 @@
 <title>Hotel Paradise</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<!-- ICON CSS JS jQUERY -->
-<link rel="shortcut icon" href="IMAGES/hotel-paradise.png" type="image/x-icon">
-<link rel="stylesheet" href="CSS\main.css">
-<script src="JS\main.js" type="text/javascript" defer="true"></script>
-<script src="JS\jQUERY\jquery-3.6.0.min.js"></script>
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--W3 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--W3 BOOTSTRAP-->
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--EXTRA-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon"><!-- WEB ICON -->
 
-<!--END ICON CSS JS jQUERY-->
-
+<link rel="stylesheet" href="..\CSS\home.css"><!--CSS-->
+<script src="..\JS\home.js" type="text/javascript" defer="true"></script><!--JS-->
 
 <style>
 @font-face 
 {
 font-family: Poppins;
-src: url('FONTS\\Poppins_font_family\\Poppins_Medium_500.ttf');
+src: url('..\\FONTS\\Poppins\\Poppins_Medium_500.ttf');
+font-family: SF Pro;
+src: url('..\\FONTS\\SF pro\\SFPRODISPLAYBOLD.OTF');
 }
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
+*,h1,h2,h3,h4,h5,h6
+{
+  font-family:"SF Pro";
+}
+body
+{
+  background-color:#00a8f6;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  font-family: "SF Pro","Poppins", "sans-serif";
+  font-size:16px;
+}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
-
-
+.mySlides {display:none;border:5px inset rgb(98, 96, 96);}
 </style>
+
 </head>
 
-<body>
+<body onload="setLoadingPage()">
 
-<!-- Sidebar/menu -->
+  <div class="loader">
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+    <div class="circle three"></div>
+  </div>
+  <center><h1 class="animation-caption slideUp">  Signing you in...</h1></center>
+
+  <div id="actual-body">
+
+  <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding w3-overflow-hidden" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="navbar_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><img style="height:30;width:30px;margin:auto;" src="IMAGES/close_icon_2.png" alt="Close Menu"></a>
+  <a href="javascript:void(0)" onclick="navbar_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><img style="height:30;width:30px;margin:auto;" src="../IMAGES/close_icon_2.png" alt="Close Menu"></a>
   <div class="w3-container">
-    <h3 class="w3-padding-10"><b><img src="IMAGES/hotel-paradise.png" height="220px" width="230px" alt=""></b></h3>
+    <h3 class="w3-padding-10"><b><img src="../IMAGES/hotel-paradise.png" height="220px" width="230px" alt=""></b></h3>
   </div>
   <div class="w3-bar-block">
     <a href="#home" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
@@ -52,7 +67,7 @@ body {font-size:16px;}
     <a href="#booknow" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Book now</a> 
     <a href="#feedback" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">Feedback</a> 
     <a href="#aboutcontactus" onclick="navbar_close()" class="w3-bar-item w3-button w3-hover-white">About & Contact us</a>
-    <a href="https://github.com/hr097" onclick="navbar_close()" class="w3-bar-item w3-hover-black" style="color:black;padding-left:50px;margin-top:120px;font-size:0.8em; text-decoration: none;">Developed by S.H.V</a> 
+    <a href="https://github.com/hr097" onclick="navbar_close()" class="w3-bar-item w3-hover-black" style="color:black;padding-left:30px;margin-top:120px;font-size:0.8em; text-decoration: none;">Developed by Winter & Stark</a> 
   </div>
 </nav>
 
@@ -69,39 +84,25 @@ body {font-size:16px;}
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
   <!-- Header -->
-  <div class="w3-container " style="margin-top:50px" id="showcase">
+  <div class="w3-container" style="margin-top:50px" id="anim">
     <div id="anim">
-    <h1 class="w3-jumbo mytitle" id="home" style="font-family:Poppins;"><b style="font-size:55px;">Hey , <b style="color:green;"id="user"> User </b><br> <span style="font-size:65px;">Going on Tour...</span><br>  <span style="color:green;font-size:55px;">Don't worry !</span></b></h1>
+    <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="font-size:55px;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span style="font-size:55px;">Planning for Tour ,</span><br><span style="font-size:55px;">Don't worry !</span> </b></h1>
     </div>
-    <hr style="width:800px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
-    <h1 class="w3-xxxmedium w3-text-green animate-charcter"><b>"We Provides The Best Hotel Rooms across India."</b></h1>
-   
+  </div> 
+  <center><h1 style="margin:auto;" class="w3-xxxmedium w3-text-green animate-charcter"><b>" We Provides The Best Hotel Rooms across India "</b></h1></center>
+  <!-- <hr style="width:1050px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black">  -->
+  <div class="w3-content w3-section" style="max-width:1050px;max-height:500px;">
+    <img class="mySlides" src="../IMAGES/image8.jpg" style="width:100%">
+    <img class="mySlides" src="../IMAGES/image9.jpg" style="width:100%">
+    <img class="mySlides" src="../IMAGES/image5.jpg" style="width:100%">
+    <img class="mySlides" src="../IMAGES/image6.jpg" style="width:100%">
+    <img class="mySlides" src="../IMAGES/image10.jpg" style="width:100%">
+    <img class="mySlides" src="../IMAGES/image14.jpg" style="width:100%">
+    <!-- <img class="mySlides" src="../IMAGES/image7.jpg" style="width:100%"> -->
+    <!-- <img class="mySlides" src="../IMAGES/image7.jpg" style="width:100%"-->
   </div>
+  <br><br><br><br><br>
   
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding" >
-    <div class="w3-half">
-      <img class="imageborder" src="IMAGES/image5.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-      <img class="imageborder" src="IMAGES/image6.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-      <img class="imageborder" src="IMAGES/image10.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-    </div>
-
-    <div class="w3-half">
-      <img class="imageborder" src="IMAGES/image7.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-      <img class="imageborder" src="IMAGES/image8.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-      <img class="imageborder" src="IMAGES/image9.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-    </div>
-  </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
   <!-- Rooms and Facilities -->
   <div class="w3-container" id="Roomsfacilities" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-Black"><b>Rooms & Facilities</b></h1>
@@ -109,15 +110,15 @@ body {font-size:16px;}
      
     <div class="w3-row-padding" >
       <div class="w3-half">
-        <img class="imageborder" src="IMAGES/image1.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-        <img class="imageborder" src="IMAGES/image2.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-        <img class="imageborder" src="IMAGES/image3.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="../IMAGES/image1.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="../IMAGES/image2.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="../IMAGES/image3.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
       </div>
   
       <div class="w3-half">
-        <img class="imageborder" src="IMAGES/image11.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-        <img class="imageborder" src="IMAGES/image12.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
-        <img class="imageborder" src="IMAGES/image13.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="../IMAGES/image11.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="../IMAGES/image12.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
+        <img class="imageborder" src="../IMAGES/image13.jpg" style="width:100%" onclick="showFullImage(this)" alt="">
       </div>
     </div>
 
@@ -127,7 +128,7 @@ body {font-size:16px;}
   <div class="w3-container" id="booknow" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-black"><b>Packages </b></h1>
     <hr style="width:230px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
-    <h3>We are providing Hotel Rooms in variety of Packages Listed Below. Each and every package contains Safe and Clean Rooms with Sufficient Facilities. <span style="color:rgb(8, 133, 25);"> 24 * 7 Hotel Staff Support Available. </span></h3>
+    <h3 style="font-family:'SF Pro';">We are providing Hotel Rooms in variety of Packages Listed Below. Each and every package contains Safe and Clean Rooms with Sufficient Facilities. <span style="font-weight:bold;color:rgb(8, 133, 25);"> 24 * 7 Hotel Staff Support Available. </span></h3>
   </div>
 
   <div class="w3-row-padding">
@@ -210,8 +211,8 @@ body {font-size:16px;}
   <div class="w3-container" id="feedback" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-black"><b>Feedback</b></h1>
     <hr style="width:230px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
-    <h3>We are very Happy that You are writing to us , We are taking our Customer's Feedback very Seriously so ,<span style="color:rgb(43, 143, 60);"> Please Tell us About Our Services So that We can make it Better to Improve Your Next Stay.</span></h3>
-    <form action="/action_page.php" target="_blank">
+    <h3 style="font-family:'SF Pro';">We are very Happy that You are writing to us , We are taking our Customer's Feedback very Seriously so ,<span style="font-weight:bold;color:rgb(43, 143, 60);"> Please Tell us About Our Services So that We can make it Better to Improve Your Next Stay.</span></h3>
+    <form>
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" required>
@@ -225,7 +226,8 @@ body {font-size:16px;}
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
       <br>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Send</button>
+      <button type="button" onclick="Msg('green','Your feedback has been recorded successfully.','3000')" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Send</button>
+      <center><h6 id="feedback-record"></h6></center>
     </form>  
   </div>
 
@@ -239,7 +241,7 @@ body {font-size:16px;}
     <div class="w3-padding-50 w3-content w3-text-black" id="contact">
       <hr style="width:200px" class="w3-opacity">
       <div class="w3-section">
-        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Matheran,India</p>
+        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Matheran, India.</p>
         <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91 97272 12345</p>
         <p><i class="fa fa-envelope fa-fw w3-black-white w3-xxlarge w3-margin-right"> </i> Email: hotelparadise@gmail.com</p>
       </div>
@@ -252,20 +254,34 @@ body {font-size:16px;}
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
       <br>
-      <p class="w3-medium animate-charcter2">©️ Copyright 2022 . S.H.V. <a href="https://hr097.github.io" target="_blank" class="w3-hover-text-green"></a></p>
+      <p class="w3-medium animate-charcter2">©️ Copyright 2022 Winter & Stark<a href="https://hr097.github.io" target="_blank" class="w3-hover-text-green"></a></p>
     <!-- End footer -->
       </footer>
   </div>
 
 <!-- End page content -->
+
 </div>
-<script>
 
-// Script to open and close sidebar
+</div>
 
+<script type="text/javascript">
 
+  function setLoadingPage()
+  {
 
+    setTimeout(function(){
+
+      document.getElementById("actual-body").style.display = "block";
+      document.getElementById("Home-Name").innerHTML = localStorage.getItem("Name");
+      document.getElementsByClassName("loader")[0].style.display = "none";
+      document.getElementsByClassName("animation-caption")[0].style.display = "none";
+      document.getElementsByTagName("body")[0].style.backgroundColor="white";      
+    },4000);
+	  
+  }
+  
 </script>
-
+<noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
 </body>
 </html>

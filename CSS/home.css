@@ -1,0 +1,211 @@
+
+/* loading animation code */
+
+.circle {
+    position: absolute;
+    margin-top:-20px;
+    border: 8px solid transparent;
+    border-top-color: #020202;
+    border-radius: 50%;
+    -webkit-animation: rotate linear infinite;
+            animation: rotate linear infinite;
+  }
+  .circle.one {
+    height: 50px;
+    width: 50px;
+    left: 50px;
+    top: 50px;
+    -webkit-animation-duration: 0.85s;
+            animation-duration: 0.85s;
+  }
+  .circle.two {
+    height: 75px;
+    width: 75px;
+    top: 38px;
+    left: 38px;
+    -webkit-animation-duration: 0.95s;
+            animation-duration: 0.95s;
+  }
+  .circle.three {
+    height: 100px;
+    width: 100px;
+    top: 25px;
+    left: 25px;
+    -webkit-animation-duration: 1.05s;
+            animation-duration: 1.05s;
+  }
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -90px;
+  }
+  
+  @-webkit-keyframes rotate {
+    from {
+      transform: rotateZ(360deg);
+    }
+    to {
+      transform: rotateZ(0deg);
+    }
+  }
+  @keyframes rotate {
+    from {
+      transform: rotateZ(360deg);
+    }
+    to {
+      transform: rotateZ(0deg);
+    }
+  }
+  
+  #actual-body{
+    display:none;
+  }
+  .animation-caption
+  {
+    font-size:2em;
+    color:rgb(0, 0, 0);
+    font-family:"SF pro";
+    margin:auto;
+    margin:auto;
+    margin-top:410px;
+  }
+  
+  .slide-effect {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slideUp {
+    position: relative;
+    font-size: 35px;
+    opacity:0;
+    top:40px;
+    left:10px;
+    animation: slideUp ease .5s forwards 1.2s;
+  }
+  @keyframes slideUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-40px);opacity:1;}
+  }
+  @media only screen and (max-width: 600px) {
+    .slide-effect, .text, .slideDown, .slideUp {
+      font-size: 15px;
+    }
+  }
+
+  /*-------------------------------------------*/
+  .animate-charcter
+{  
+  font-family:Poppins;
+  background-image: linear-gradient(
+    -225deg,
+    #00ccff 0%,
+    #096cc8 29%,
+    #095f81 67%,
+    #477e94 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /*text-fill-color: transparent;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+ 
+.mytitle 
+{
+    font-weight: 900;
+}
+
+.imageborder
+{
+  border:5px solid black;
+}
+ 
+
+#anim{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  #anim:first-of-type{
+    animation: appear 10s 1;
+  }
+  #anim:last-of-type{
+    animation: reveal 8s 1;
+  }
+  #anim:last-of-type span{
+
+    animation: slide 10s 1;
+  }
+  @keyframes appear{
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+  @keyframes slide{
+    0%{margin-left:-800px;}
+    20%{margin-left:-800px;}
+    35%{margin-left:0px;}
+  100%{margin-left:0px;}
+  }
+  @keyframes reveal{
+    0%{opacity: 0; width: 0px;}
+    20%{opacity: 1; width: 0px;}
+    30%{width: 655px;}
+    80%{opacity: 1;}
+    100%{opacity: 0; width: 655px;}
+  }
+
+
+.animate-charcter2
+{  
+  font-family:SF Pro;
+  background-image: linear-gradient(
+    -225deg,
+    #030303 0%,
+    #5a5959 29%,
+    #dad6d6 67%,
+    #808080 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: rgb(3, 3, 3);
+  background-clip: text;
+  /*text-fill-color: transparent;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip2 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip2 {
+  to {
+    background-position: 200% center;
+  }
+}
+
+#feedback-record
+{
+    font-size:2em;
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+}
