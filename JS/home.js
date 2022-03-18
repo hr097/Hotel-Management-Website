@@ -1,4 +1,3 @@
-var packageName="";
 
 function navbar_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -16,7 +15,6 @@ function navbar_open() {
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
-
   
   var myIndex = 0;
   carousel();
@@ -42,3 +40,31 @@ function Msg(TxtColor,Text,timer)
 		document.getElementById("feedback-record").innerHTML="";
 	},timer);
 }
+
+
+const silver = document.getElementById('Silver');
+const gold = document.getElementById('Gold');
+const Delux = document.getElementById('Delux');
+const Platinum = document.getElementById('Platinum');
+
+
+function BookAndPay()
+{
+  window.open('../HTML/booking.html','_self');
+}
+silver.addEventListener('click', () => {
+  sessionStorage.setItem("Package", "Silver");
+  BookAndPay();
+});
+gold.addEventListener('click', () => {
+  sessionStorage.setItem("Package", "Gold");
+  BookAndPay();
+});
+Delux.addEventListener('click', () => {
+  sessionStorage.setItem("Package", "Delux");
+  BookAndPay();
+});
+Platinum.addEventListener('click', () => {
+	sessionStorage.setItem("Package", "Platinum");
+  BookAndPay();
+});

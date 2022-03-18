@@ -7,36 +7,168 @@
         <script src="../JS/home.js" type="text/javascript" defer="true"></script>
 
         <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> <!--BOOTSTRAP-->
         <style type="text/css">
-            /*-------------font face---------*/
+        /*-------------------font face----------------------*/
 
-            @font-face 
-            {
-            font-family: Poppins;
-            src: url('..\\FONTS\\Poppins\\Poppins_Medium_500.ttf');
-            font-family: SF Pro;
-            src: url('..\\FONTS\\SF pro\\SFPRODISPLAYBOLD.OTF');
-            }
-
-            /*-------------------------------*/
+        @font-face 
+        {
+        font-family: 'Poppins';
+        src: url('..\\FONTS\\Poppins\\Poppins_Medium_500.ttf');
+        font-family: 'SF Pro';
+        src: url('..\\FONTS\\SF pro\\SFPRODISPLAYBOLD.OTF');
+        }
         *
         {
-            font-family: "SF Pro";
+            font-family: 'SF Pro';
         }
-        body
-        {
-            background-color:rgb(255, 240, 240);
-        }    
+        /*--------------------------------------------------*/
+    
         </style>
     </head>
     
-    <body>
+    <body onload="getAccountData()">
+        <div class="testbox">
+            <form action="/" onreset="getAccountData()">
 
+              <center><img style="margin:auto;" src="../IMAGES/hotel-paradise.png"  height="200px" width="200px" alt=""><h1 style="font-size:6vh;">Hotel Room Booking</h1></center>
+              <!-- <p>Please help us improve our restaurant services by filling in our feedback form. Thank you!</p> -->
+              <h4>Name : </h4>
+              <div class="name">
+                <input id="name" type="text" name="name" placeholder="Full name" />
+              </div>
+              <h4>Email : </h4>
+              <input  id="email" type="email" name="name" placeholder="someone@example.com" />
+              <h4>Hotel venue : </h4>
+              <select>
+                <option class="disabled" value="Venue" disabled selected>Select hotel venue</option>
+                <option value="1">Matheran</option>
+                <option value="2">Kashmir</option>
+                <option value="3">Mumbai</option>
+                <option value="4">Surat</option>
+                <option value="5">Kerala</option>
+                <option value="6">Div</option>
+                <option value="7">Rajasthan</option>
+                <option value="8">Chennai</option>
+              </select>
+              <h4>Packages : </h4>
+              <select id="pkcg">
+                <!-- <option class="disabled" value="Packages" disabled selected></option> -->
+                <option value="1" selected>Silver</option>
+                <option value="2">Gold</option>
+                <option value="3">Delux</option>
+                <option value="4">Platinum</option>
+              </select>
+              <h4>No. of rooms : </h4>
+              <select>
+                <!-- <option class="disabled" value="rooms" disabled selected></option> -->
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <h4>No. of Guests : </h4>
+              <select>
+                <!-- <option class="disabled" value="location" disabled selected>*Please Select*</option> -->
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="5">More than 5</option>
+              </select>
+              <h4>Date to be booked : </h4>
+              <div class="day-visited">
+                <input type="date" name="dayvisited" required/>
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4>Time of Arrival : </h4>
+              <div class="time-visited">
+                <input type="time" name="timevisited" required/>
+                <!-- <i class="fas fa-clock"></i> -->
+              </div>
+              <h4>Parking Facilities : </h4>
+              <div class="question-answer">
+                <label><input type="radio" value="none" name="Parking" /> Yes</label>
+                <label><input type="radio" value="none" name="Parking" checked/> No</label>
+              </div>
+        
+              <!-- <h4>Untitled</h4>
+              <table>
+                <tr>
+                  <th class="first-col"></th>
+                  <th>Amazing</th>
+                  <th>Good</th>
+                  <th>Decent</th>
+                  <th>Disappointing</th>
+                </tr>
+                <tr>
+                  <td class="first-col">Food Quality</td>
+                  <td><input type="radio" value="none" name="Food" /></td>
+                  <td><input type="radio" value="none" name="Food" /></td>
+                  <td><input type="radio" value="none" name="Food" /></td>
+                  <td><input type="radio" value="none" name="Food" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">Overall Service Quality</td>
+                  <td><input type="radio" value="none" name="Service" /></td>
+                  <td><input type="radio" value="none" name="Service" /></td>
+                  <td><input type="radio" value="none" name="Service" /></td>
+                  <td><input type="radio" value="none" name="Service" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">Speed of Service</td>
+                  <td><input type="radio" value="none" name="Speed" /></td>
+                  <td><input type="radio" value="none" name="Speed" /></td>
+                  <td><input type="radio" value="none" name="Speed" /></td>
+                  <td><input type="radio" value="none" name="Speed" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">Price</td>
+                  <td><input type="radio" value="none" name="Price" /></td>
+                  <td><input type="radio" value="none" name="Price" /></td>
+                  <td><input type="radio" value="none" name="Price" /></td>
+                  <td><input type="radio" value="none" name="Price" /></td>
+                </tr>
+                <tr>
+                  <td class="first-col">Overall Experience</td>
+                  <td><input type="radio" value="none" name="Experience" /></td>
+                  <td><input type="radio" value="none" name="Experience" /></td>
+                  <td><input type="radio" value="none" name="Experience" /></td>
+                  <td><input type="radio" value="none" name="Experience" /></td>
+                </tr>
+              </table> -->
+              <h4>Any Special Instructions for us ?</h4>
+              <textarea rows="5" style="resize: none;" placeholder="Any special services you want from us at arrival time (extra charges may apply*)"></textarea>
+              <div class="btn-block">
+                <button type="button">Make Payment</button>
+                <button style="margin:10px;"type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
     </body>
     
     <script type="text/javascript">
-      
+      function getPackageDetails()
+      {
+        let pkcg =  sessionStorage.getItem('Package');
+
+        if(pkcg=="Platinum")
+        document.getElementById("pkcg").selectedIndex = 3;
+        else if(pkcg=="Delux")
+        document.getElementById("pkcg").selectedIndex = 2;
+        else if(pkcg=="Gold")
+        document.getElementById("pkcg").selectedIndex = 1;
+        else
+        document.getElementById("pkcg").selectedIndex = 0;
+      }
+      function getAccountData()
+      {   
+          document.getElementById("name").value = localStorage.getItem("Name");
+          document.getElementById("email").value = localStorage.getItem("Email");
+          getPackageDetails();
+      }
     </script>
     <noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
 </html>
