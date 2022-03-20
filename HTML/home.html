@@ -11,6 +11,11 @@
 <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon"><!-- WEB ICON -->
 
 <link rel="stylesheet" href="..\CSS\home.css"><!--CSS-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"></script>
 <script src="..\JS\home.js" type="text/javascript" defer="true"></script><!--JS-->
 <script src="..\JS\jQUERY\jquery-3.6.0.min.js"></script> <!--jQuery -->
 
@@ -111,7 +116,7 @@ body
   <!-- Header -->
   <div class="w3-container" style="margin-top:50px;">
     <div id="anim">
-    <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="font-size:55px;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span style="font-size:55px;">Planning for Tour ,</span><br><span style="font-size:55px;">Don't worry !</span></b></h1>
+    <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="margin-bottom:30px;font-size:0.65em;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span>Planning for Tour ,</span><br><span>Don't worry !</span></b></h1>
     </div>
     <span style="display:inline-block;float:right;margin-top:-40px;" class="fade-in" >
       <img src="../IMAGES/idea.png" alt="" id="dashboard-image">
@@ -121,16 +126,103 @@ body
   <center><h1 class="w3-xxxmedium animate-charcter"><b style="margin:auto;" >" We Provides The Best Hotel Rooms across India "</b></h1></center>
   
   <!-- <hr style="width:1050px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black">  -->
-  <div class="w3-content w3-section" style="max-width:1050px;max-height:500px;">
-    <img class="mySlides" src="../IMAGES/image8.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image9.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image5.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image6.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image10.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image14.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image15.jpg" style="width:100%">
-    <img class="mySlides" src="../IMAGES/image16.jpg" style="width:100%">
-  </div>
+  <!-- <div class="w3-content w3-section" style="max-width:1050px;min-width:1050px;">
+    <img class="mySlides" src="../IMAGES/image8.jpg" >
+    <img class="mySlides" src="../IMAGES/image9.jpg" >
+    <img class="mySlides" src="../IMAGES/image5.jpg" >
+    <img class="mySlides" src="../IMAGES/image6.jpg"  >
+    <img class="mySlides" src="../IMAGES/image10.jpg" >
+    <img class="mySlides" src="../IMAGES/image14.jpg" >
+    <img class="mySlides" src="../IMAGES/image15.jpg" >
+    <img class="mySlides" src="../IMAGES/image16.jpg" >
+  </div> -->
+
+  <!--Slider-->
+
+  <div class="content" style="margin-top:40px;margin-left:10px;margin-right:10px;border:5px solid black;">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button name="slidebutton" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button name="slidebutton"  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button name="slidebutton" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button name="slidebutton"  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button name="slidebutton"  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>         
+        <button name="slidebutton"  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+          aria-label="Slide 6"></button>
+        <button name="slidebutton"  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+          aria-label="Slide 7"></button>
+        <button name="slidebutton" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+          aria-label="Slide 8"></button>
+      </div>
+
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active" >
+          <img src="../IMAGES/image8.jpg" id="active-image" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="../IMAGES/image9.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../IMAGES/image5.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../IMAGES/image6.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="../IMAGES/image10.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      
+        <div class="carousel-item">
+          <img src="../IMAGES/image14.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+      <div class="carousel-item">
+          <img src="../IMAGES/image15.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+      </div>
+
+      <div class="carousel-item">
+          <img src="../IMAGES/image16.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+      </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+    </div>
 
 
   <!-- Modal for full size images on click-->
@@ -143,7 +235,7 @@ body
   </div>
 
   <!-- Rooms and Facilities -->
-  <div class="w3-container" id="Roomsfacilities" style="margin-top:200px">
+  <div class="w3-container" id="Roomsfacilities" style="margin-top:40px">
     <h1 class="w3-xxxlarge w3-text-Black"><b>Rooms & Facilities</b></h1>
     <hr style="width:430px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
      
@@ -265,7 +357,7 @@ body
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
       <br>
-      <button type="button" onclick="Msg('green','Your feedback has been recorded successfully.','3000')" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Send</button>
+      <button type="button" onclick="feedbackMsg()" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Send</button>
       <center><h6 id="feedback-record"></h6></center>
     </form>  
   </div>
@@ -275,17 +367,17 @@ body
   <div class="w3-container" id="aboutcontactus" style="margin-top:75px" >
     <h1 class="w3-xxxlarge w3-text-black"><b>About & Contact Us</b></h1>
     <br>
-    <hr style="width:470px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
+    <hr style="width:470px;background-color:black;margin-top:-20px;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black"> 
     
     <div class="w3-padding-50 w3-content w3-text-black" id="contact">
-      <hr style="width:200px" class="w3-opacity">
+      <!-- <hr style="width:200px" class="w3-opacity"> -->
       <div class="w3-section">
         <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Matheran, India.</p>
         <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91 97272 12345</p>
         <p><i class="fa fa-envelope fa-fw w3-black-white w3-xxlarge w3-margin-right"> </i> Email: hotelparadise@gmail.com</p>
       </div>
     </div>
-    <footer class="w3-content w3-padding-0 w3-text-black w3-xxxlarge" align="center">
+    <footer class="w3-content w3-padding-0 w3-text-black" style="font-size: 2.2em" align="center">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
       <i class="fa fa-snapchat w3-hover-opacity"></i>

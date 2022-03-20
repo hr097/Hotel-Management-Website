@@ -1,5 +1,5 @@
 
-function navbar_open() {
+  function navbar_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
   }
@@ -16,30 +16,52 @@ function navbar_open() {
     captionText.innerHTML = element.alt;
   }
   
-  var myIndex = 0;
-  carousel();
   
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000); // Change image every 2 seconds
-  }  
+  // var myIndex = 0;
+  // carousel();
+  
+  // function carousel() {
+  //   var i;
+  //   var x = document.getElementsByClassName("mySlides");
+  //   for (i = 0; i < x.length; i++) {
+  //     x[i].style.display = "none";  
+  //   }
+  //   myIndex++;
+  //   if (myIndex > x.length) {myIndex = 1}    
+  //   x[myIndex-1].style.display = "block";  
+  //   setTimeout(carousel, 4000); // Change image every 2 seconds
+  // }  
+  
+  // var images = [8,9,5,6,10,14,15,16];
+  // var index=0;
+
+  // setInterval(function(){
+  //   document.getElementById("active-image").src = "../IMAGES/image"+images[index]+".jpg";
+  //   document.getElementsByName("slidebutton")[index].class = "";
+  //   document.getElementsByName("slidebutton")[index+1].class = "active";
+  //   index++;
+  //   if(index==8)
+  //   index=0;
+  // },4000);
 
   
-function Msg(TxtColor,Text,timer) 
-{   
-	document.getElementById("feedback-record").style.color=TxtColor;
-	document.getElementById("feedback-record").innerHTML=Text;
-	setTimeout(function(){
-		document.getElementById("feedback-record").innerHTML="";
-	},timer);
-}
+  function feedbackMsg() 
+  {
+    if(document.getElementsByName('Name').value==""&&document.getElementsByName('Email').value==""&&document.getElementsByName('Message').value=="")
+    Msg('red',"Please fill up the feedback form");
+    else
+    Msg('green','Your feedback has been recorded successfully.','3000');
+  }
+
+
+  function Msg(TxtColor,Text,timer) 
+  { 
+    document.getElementById("feedback-record").style.color=TxtColor;
+    document.getElementById("feedback-record").innerHTML=Text;
+    setTimeout(function(){
+      document.getElementById("feedback-record").innerHTML="";
+    },timer);
+  }
 
 
 const silver = document.getElementById('Silver');

@@ -57,7 +57,10 @@
       transform: rotateZ(0deg);
     }
   }
-  
+  footer i
+  {
+    padding:5px;
+  }
   #actual-body{
     display:none;
   }
@@ -68,7 +71,6 @@
     font-family:"SF pro";
     margin:auto;
     margin-top:410px;
-    margin-left: -20px;
   }
   
   .slide-effect {
@@ -139,10 +141,10 @@
  
 #dashboard-image
 {
-  max-width:390px;
-  min-width:390px;
-  min-height:420px;
-  max-height:420px;
+  max-width:350px;
+  min-width:350px;
+  min-height:380px;
+  max-height:380px;
 }
 
 .fade-in {
@@ -202,6 +204,7 @@
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
+    margin-bottom:20px;
   }
   #anim:first-of-type{
     animation: appear 0s 1;
