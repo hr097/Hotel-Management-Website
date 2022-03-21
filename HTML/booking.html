@@ -4,7 +4,7 @@
         <title>Room Booking | Hotel Paradise</title>
         <link rel="stylesheet" href="../CSS/booking.css">
         <script src="../JS/booking.js" type="text/javascript" defer="true"></script>
-        <script src="../JS/home.js" type="text/javascript" defer="true"></script>
+        <!-- <script src="../JS/home.js" type="text/javascript" defer="true"></script> -->
 
         <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> <!--BOOTSTRAP-->
@@ -41,7 +41,7 @@
               <input  id="email" type="email" name="name" placeholder="someone@example.com" />
               <h4>Hotel venue : </h4>
               <select id="hotel-venue">
-                <option value="Venue" selected>Select hotel venue</option>
+                <option value="" selected>Select hotel venue</option>
                 <option value="1">Matheran</option>
                 <option value="2">Kashmir</option>
                 <option value="3">Mumbai</option>
@@ -71,28 +71,28 @@
               <h4>No. of Guests : </h4>
               <select id="noOfGuests">
                 <!-- <option class="disabled" value="location" disabled selected>*Please Select*</option> -->
-                <option value="select" selected>select number of guests</option>
+                <option value="" selected>select number of guests</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-                <option value="5">More than 5</option>
+                <option value="5+">More than 5</option>
               </select>
               <h4>Date to be booked : </h4>
               <div class="day-visited">
-                <input type="date" id="booking-date" name="dayvisited" required/>
+                <input onblur="setMinBookTime()" type="date" id="booking-date" name="dayvisited" required/>
                 <i class="fas fa-calendar-alt"></i>
               </div>
               <h4>Time of Arrival : </h4>
               <div class="time-visited">
-                <input type="time" id="booking-time" name="timevisited" required/>
+                <input type="time" id="booking-time" min="00:00" name="timevisited" required/>
                 <!-- <i class="fas fa-clock"></i> -->
               </div>
               <h4>Parking Facilities : </h4>
               <div class="question-answer">
-                <label><input type="radio" value="none" name="Parking" /> Yes</label>
-                <label><input type="radio" value="none" name="Parking" checked/> No</label>
+                <label><input type="radio" value="Yes" name="Parking" /> Yes</label>
+                <label><input type="radio" value="No" name="Parking" checked/> No</label>
               </div>
               <h4>Tax (12%) : </h4>
               <div class="name">
@@ -102,7 +102,7 @@
               <div class="name">
                 <input id="totalamount" type="text" name="totalamount" placeholder="Total amount $" readonly/>
               </div>
-              <!-- <h4>Untitled</h4>
+               <!-- <h4>Untitled</h4>
               <table>
                 <tr>
                   <th class="first-col"></th>
@@ -146,9 +146,9 @@
                   <td><input type="radio" value="none" name="Experience" /></td>
                   <td><input type="radio" value="none" name="Experience" /></td>
                 </tr>
-              </table> -->
+              </table>  -->
               <h4>Any Special Instructions for us ?</h4>
-              <textarea rows="5" style="resize: none;" placeholder="Any special services you want from us at arrival time (extra charges may apply*)"></textarea>
+              <textarea rows="5" style="resize: none;" id="instructions" placeholder="Please mention if any special services you want from us at arrival time (*extra charges may apply on checkout)"></textarea>
               <div class="btn-block">
                 <button type="button" onclick="proccedToPayment()">Make Payment</button>
                 <button style="margin:10px;" type="reset">Clear</button>
@@ -158,27 +158,10 @@
     </body>
     
     <script type="text/javascript">
-      function getPackageDetails()
-      {
-        let pkcg =  sessionStorage.getItem('Package');
-
-        if(pkcg=="Platinum")
-        document.getElementById("packageType").selectedIndex = 3;
-        else if(pkcg=="Delux")
-        document.getElementById("packageType").selectedIndex = 2;
-        else if(pkcg=="Gold")
-        document.getElementById("packageType").selectedIndex = 1;
-        else
-        document.getElementById("packageType").selectedIndex = 0;
-      }
-      function getAccountData()
-      {   
-          document.getElementById("name").value = localStorage.getItem("Name");
-          document.getElementById("email").value = localStorage.getItem("Email");
-          getPackageDetails();
-          setAmt();
-      }
      
+
+     
+      
     </script>
     <noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
 </html>

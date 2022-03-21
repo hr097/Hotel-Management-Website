@@ -275,6 +275,7 @@ function getAccount()
 			setTimeout(function(){
 			makeFieldEmpty(document.getElementById("Email_signin"));
 			makeFieldEmpty(document.getElementById("Password_signin"));},1000);
+			document.getElementById("remember-me").checked=false;
 		}
 
 	}

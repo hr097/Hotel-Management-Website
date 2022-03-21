@@ -10,7 +10,7 @@ margin: 0;
 outline: none;
 font-family: "SF Pro","Poppins","Sans-serif";
 font-size: 14px;
-color: #666;
+color: rgb(0, 0, 0);
 line-height: 22px;
 }
 h1, h4 {

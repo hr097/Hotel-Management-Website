@@ -74,6 +74,8 @@ function BookAndPay()
 {
   window.open('../HTML/booking.html','_self');
 }
+
+
 silver.addEventListener('click', () => {
   sessionStorage.setItem("Package", "Silver");
   BookAndPay();
