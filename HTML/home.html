@@ -5,19 +5,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- META TAGS WILL BE HERE -->
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--W3 CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--W3 BOOTSTRAP-->
 
 <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon"><!-- WEB ICON -->
 
 <link rel="stylesheet" href="..\CSS\home.css"><!--CSS-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-crossorigin="anonymous"></script>
 <script src="..\JS\home.js" type="text/javascript" defer="true"></script><!--JS-->
 <script src="..\JS\jQUERY\jquery-3.6.0.min.js"></script> <!--jQuery -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><!--W3 SLIDER BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <!--W3 SLIDER BOOTSTRAP-->
 
 <style>
 @font-face 
@@ -47,6 +47,9 @@ body
 .w3-badge {height:13px;width:13px;padding:0}
 .mySlides {display:none;border:5px inset rgb(98, 96, 96);}
 
+
+/* MEDIA QUERIES */
+
 /* Extra small devices (phones, 600px and down) */
 
 /* @media only screen and (max-width: 600px) {
@@ -71,6 +74,7 @@ body
    
   }
 }  */
+
 </style>
 
 </head>
@@ -83,7 +87,8 @@ body
     <div class="circle three"></div>
   </div>
   <center><h1 class="animation-caption slideUp">Signing you in...</h1></center>
-
+  <!-- <br><img class="animation-caption slideUp" id="loading-icon" src="../IMAGES/star.png"alt=""> -->
+ 
   <div id="actual-body">
 
   <!-- Sidebar/menu -->
@@ -118,7 +123,7 @@ body
     <div id="anim">
     <h1 class="w3-jumbo mytitle" id="home" style="font-family:'SF Pro';"><b style="margin-bottom:30px;font-size:0.65em;">Hey , <b style="color:green;" id="Home-Name" ></b><br><span>Planning for Tour ,</span><br><span>Don't worry !</span></b></h1>
     </div>
-    <span style="display:inline-block;float:right;margin-top:-40px;" class="fade-in" >
+    <span style="float:right;margin-top:-40px;" class="fade-in" >
       <img src="../IMAGES/idea.png" alt="" id="dashboard-image">
     </span>
 
@@ -126,18 +131,6 @@ body
   <center><h1 class="w3-xxxmedium animate-charcter"><b style="margin:auto;" >" We Provides The Best Hotel Rooms across India "</b></h1></center>
   
   <!-- <hr style="width:1050px;background-color:black;border:3px solid rgb(5, 5, 5)" class="w3-roundw3-black">  -->
-  <!-- <div class="w3-content w3-section" style="max-width:1050px;min-width:1050px;">
-    <img class="mySlides" src="../IMAGES/image8.jpg" >
-    <img class="mySlides" src="../IMAGES/image9.jpg" >
-    <img class="mySlides" src="../IMAGES/image5.jpg" >
-    <img class="mySlides" src="../IMAGES/image6.jpg"  >
-    <img class="mySlides" src="../IMAGES/image10.jpg" >
-    <img class="mySlides" src="../IMAGES/image14.jpg" >
-    <img class="mySlides" src="../IMAGES/image15.jpg" >
-    <img class="mySlides" src="../IMAGES/image16.jpg" >
-  </div> -->
-
-  <!--Slider-->
 
   <div class="content" style="margin-top:40px;margin-left:10px;margin-right:10px;border:5px solid black;">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -412,10 +405,6 @@ body
 	  
   }
 
-  // $("button").click(function(packageName){
-  //   packageName = $(this);
-  // });
-  // alert(packageName);
 </script>
 <noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
 </body>

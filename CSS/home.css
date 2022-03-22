@@ -38,7 +38,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -90px 0 0 -90px;
+    margin: -90px 0 0 -80px;
   }
   
   @-webkit-keyframes rotate {
@@ -70,6 +70,7 @@
     color:rgb(0, 0, 0);
     font-family:"SF pro";
     margin:auto;
+    margin-left: -20px;
     margin-top:410px;
   }
   
@@ -200,6 +201,14 @@
 
 }
 
+#loading-icon
+{
+  min-height: 150px;
+  min-width: 170px;
+  max-width:170px;
+  max-height: 150px;
+  margin-top:-800px;
+}
 #anim{
     display: inline-block;
     overflow: hidden;
@@ -267,8 +276,8 @@
 
 #feedback-record
 {
-    font-size:2em;
+  font-size:2em;
 	margin:auto;
-	margin-top:10px;
+	margin-top:20px;
 	margin-bottom:10px;
 }

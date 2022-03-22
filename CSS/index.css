@@ -1,4 +1,6 @@
 
+/* this file is shared with index.html and forgot-creditionals.html */
+
 /*-------------font face---------*/
 
 @font-face 
@@ -66,20 +68,6 @@ button {
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 }
-
-button:active {
-	transform: scale(0.95);
-}
-
-button:focus {
-	outline: none;
-}
-
-button.ghost {
-	background-color: transparent;
-	border-color: #020202;
-}
-
 form {
 	background-color: #FFFFFF;
 	display: flex;
@@ -98,6 +86,44 @@ input {
 	margin: 8px 0;
 	width: 100%;
 }
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: rgb(19, 115, 241);
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #020202;
+}
+
+
 
 .container {
 	background-color: #fff;
@@ -222,45 +248,7 @@ input {
 	transform: translateX(20%);
 }
 
-/* .social-container {
-	margin: 20px 0;
-}
 
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-} */
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: rgb(19, 115, 241);
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
 
 
 .hotel-icon

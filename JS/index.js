@@ -1,4 +1,7 @@
 
+
+/* this file is shared with index.html and forgot-creditionals.html */
+
 const container = document.getElementById('container');
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
@@ -30,16 +33,30 @@ function checkCookies()
  
  function setCookies(key,value)
  {   
-        //  let Email = document.getElementById("Email_signin").value;
-        //  let Password = document.getElementById("Password_signin").value;
-        //  document.cookie = `Email=${Email};Password=${Password}`;
-
 		 document.cookie =`${key}=${value}`;
  }
 
-function makeFieldEmpty(textField)
-{
-	textField.value="";
+
+function focusElem()
+{   
+    
+    // let Prom = new Promise((resolve, reject) => {    // THIS CODE WAS NOT WORKING AS EXPECTED
+	// 	 checkCookies();
+	//   }); 
+
+	// let result = await Prom;
+
+	    let myPromise = new Promise(function(Okay,Requested) {
+			if(checkCookies())
+			Okay();  // when cookies are there
+			else
+			Requested(); // when cookies are not there
+		});
+			
+		myPromise.then(
+			function(error) { window.open('HTML/home.html','_self'); },
+			SignInReq
+		  );
 }
 
 function SignInReq()
@@ -62,27 +79,7 @@ function SignInReq()
 		makeFieldEmpty(document.getElementById("Password_signin"));
 		document.getElementById("remember-me").checked=false;
 }
-function focusElem()
-{   
-    
-    // let Prom = new Promise((resolve, reject) => {
-	// 	 checkCookies();
-	//   }); 
 
-	// let result = await Prom;
-
-	    let myPromise = new Promise(function(Okay,Requested) {
-			if(checkCookies())
-			Okay();  // when cookies are there
-			else
-			Requested(); // when cookies are not there
-		});
-			
-		myPromise.then(
-			function(error) { window.open('HTML/home.html','_self'); },
-			SignInReq
-		  );
-}
 
 function makeFieldEmpty(textField)
 {
@@ -99,7 +96,6 @@ function createAccount(name,email,password,filepath)
    
 	data =  document.getElementById(password).value;
 	localStorage.setItem('Password',data);
-	//setTimeout(function(){},1000);
 
 	window.open(filepath,'_self');
 
@@ -164,6 +160,26 @@ function Msg3(TxtColor,Text,timer,rmBorder=0)
 	},timer);
 }
 
+function checkEmail(str)
+{   
+	if(str.indexOf("@")<3)
+	{
+		return false;
+	}
+	else
+	return true;
+}
+
+function checkPassword(inputtxt) 
+{ 
+if(inputtxt.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,16}$/)) 
+{ 
+return true;
+}
+else
+return false;
+} 
+
 function checkAccount()
 {   
     if(document.getElementById("Name").value==""||document.getElementById("Email_signup").value==""||document.getElementById("Password_signup").value=="")
@@ -178,9 +194,20 @@ function checkAccount()
 
 		Msg("red","Fill up all the fields given above !",3000,count);
 	}
+	else if(document.getElementById("Name").value.length>=30)
+	{
+		Msg("red","Name should be less than 30 characters !",3000);
+	}
+	else if(checkEmail(document.getElementById("Email_signup").value)==false || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("Email_signup").value)==false)
+	{
+		Msg("red","Please enter a valid email address !",3000);
+	}
+	else if(checkPassword(document.getElementById("Password_signup").value)==false)
+	{
+		Msg("red","Password must be 8 charecter long and having atleast 1 uppercase & lowercase letter with least 1 digit & 1 special charecter ! e.g. Abc@$234",4000);
+	}
 	else if(localStorage.getItem('Name')==undefined && localStorage.getItem('Email')==undefined && localStorage.getItem('Password')==undefined)
 	{    
-		//Msg("green","Your account is being created...",1500);
 		createAccount("Name","Email_signup","Password_signup",'HTML/home.html');
 	}
 	else 
@@ -192,18 +219,12 @@ function checkAccount()
 		if(name==document.getElementById("Name").value&&email==document.getElementById("Email_signup").value&&password==document.getElementById("Password_signup").value)
 		{   
 			Msg("red","You already have an account !",3000);
-			
-			//setTimeout(function(){},1000);
 			window.location.reload();
 		}
 		else
 		{
 			localStorage.clear();
-			//Msg("green","Your account is being created...",1500);
 			createAccount("Name","Email_signup","Password_signup",'HTML/home.html');
-			// makeFieldEmpty(document.getElementById("Name"));
-			// makeFieldEmpty(document.getElementById("Email_signup"));
-			// makeFieldEmpty(document.getElementById("Password_signup"));
 	    }
 	}
 	
@@ -223,6 +244,18 @@ function resetAccount()
 		{document.getElementById("Password_forgot").style.border = "2px solid red";count=3;}
 
 		Msg2("red","Fill up all the fields given above !",2000,count);
+	}
+	else if(document.getElementById("Name_forgot").value.length>=30)
+	{
+		Msg2("red","Name should be less than 30 characters !",3000);
+	}
+	else if(checkEmail(document.getElementById("Email_forgot").value)==false || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("Email_forgot").value)==false)
+	{
+		Msg2("red","Please enter a valid email address !",3000);
+	}
+	else if(checkPassword(document.getElementById("Password_forgot").value)==false)
+	{
+		Msg2("red","Password must be 8 charecter long and having atleast 1 uppercase & lowercase letter with least 1 digit & 1 special charecter ! e.g. Abc@$234",4000);
 	}
 	else if(confirm("Are you sure you want to reset your account details ?"))
 	{
