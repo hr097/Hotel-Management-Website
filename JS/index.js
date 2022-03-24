@@ -270,7 +270,6 @@ function resetAccount()
 function getAccount()
 {   
 
-
 	if(document.getElementById("Email_signin").value==""||document.getElementById("Password_signin").value=="")
 	{    
 		let count=0;

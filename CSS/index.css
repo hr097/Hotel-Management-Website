@@ -15,7 +15,8 @@ src: url('..\\FONTS\\SF pro\\SFPRODISPLAYBOLD.OTF');
 * {
 	box-sizing: border-box;
   }
-  body {
+
+body {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -68,6 +69,7 @@ button {
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 }
+
 form {
 	background-color: #FFFFFF;
 	display: flex;
@@ -86,6 +88,7 @@ input {
 	margin: 8px 0;
 	width: 100%;
 }
+
 footer {
     background-color: #222;
     color: #fff;
@@ -122,8 +125,6 @@ button.ghost {
 	background-color: transparent;
 	border-color: #020202;
 }
-
-
 
 .container {
 	background-color: #fff;
@@ -247,7 +248,6 @@ button.ghost {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
-
 
 
 
