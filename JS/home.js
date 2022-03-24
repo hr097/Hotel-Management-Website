@@ -59,18 +59,18 @@ function BookAndPay()
 
 
 silver.addEventListener('click', () => {
-  sessionStorage.setItem("Package", "Silver");
+  sessionStorage.setItem("packageType", "Silver");
   BookAndPay();
 });
 gold.addEventListener('click', () => {
-  sessionStorage.setItem("Package", "Gold");
+  sessionStorage.setItem("packageType", "Gold");
   BookAndPay();
 });
 Delux.addEventListener('click', () => {
-  sessionStorage.setItem("Package", "Delux");
+  sessionStorage.setItem("packageType", "Delux");
   BookAndPay();
 });
 Platinum.addEventListener('click', () => {
-	sessionStorage.setItem("Package", "Platinum");
+	sessionStorage.setItem("packageType", "Platinum");
   BookAndPay();
 });

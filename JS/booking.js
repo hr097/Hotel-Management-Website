@@ -1,7 +1,7 @@
 
  function getPackageDetails()
  {
-   let pkcg =  sessionStorage.getItem('Package');
+   let pkcg =  sessionStorage.getItem('packageType');
 
    if(pkcg=="Platinum")
    document.getElementById("packageType").selectedIndex = 3;
@@ -41,20 +41,20 @@ function setAmt() {
     let totalamt = document.getElementById('totalamount');
 
     if (pckgType == 1) {
-        tax.value = ((199 * parseInt(numofRooms.value)) * 12 / 100) + " $";
-        totalamt.value = (199 * parseInt(numofRooms.value)) + parseInt(tax.value) + " $";;
+        tax.value = ((1999 * parseInt(numofRooms.value)) * 12 / 100) + " ₹";
+        totalamt.value = (1999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " ₹";;
     }
     else if (pckgType == 2) {
-        tax.value = ((399 * parseInt(numofRooms.value)) * 12 / 100) + " $";
-        totalamt.value = (399 * parseInt(numofRooms.value)) + parseInt(tax.value) + " $";;
+        tax.value = ((3999 * parseInt(numofRooms.value)) * 12 / 100) + " ₹";
+        totalamt.value = (3999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " ₹";;
     }
     else if (pckgType == 3) {
-        tax.value = (649 * parseInt(numofRooms.value)) * 12 / 100 + " $";
-        totalamt.value = (649 * parseInt(numofRooms.value)) + parseInt(tax.value) + " $";;
+        tax.value = (10999 * parseInt(numofRooms.value)) * 12 / 100 + " ₹";
+        totalamt.value = (10999 * parseInt(numofRooms.value)) + parseInt(tax.value) + "₹";;
     }
     else if (pckgType == 4) {
-        tax.value = (1099 * parseInt(numofRooms.value)) * 12 / 100 + " $";
-        totalamt.value = (1099 * parseInt(numofRooms.value)) + parseInt(tax.value) + " $";
+        tax.value = (15999 * parseInt(numofRooms.value)) * 12 / 100 + " ₹";
+        totalamt.value = (15999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " ₹";
     }
 
 }

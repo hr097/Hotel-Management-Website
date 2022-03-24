@@ -1,89 +1,134 @@
 
+function removeRedBorder(obj) {
+    if (obj.style.border == "3px solid red")
+        obj.style.border = "3px solid black";
+}
+
+function redBorder(obj) 
+{
+    obj.style.border = "3px solid red";
+}
+
+function Msg(TxtColor, Text, timer, obj=null) {
+    document.getElementById("invalid-details").style.color = TxtColor;
+    document.getElementById("invalid-details").innerHTML = Text;
+    setTimeout(function () {
+        document.getElementById("invalid-details").innerHTML = "";
+        if(obj!=null)
+        removeRedBorder(obj);
+    }, timer);
+}
 
 
-    function removeRedBorder(obj) {
-        if (obj.style.border == "2px solid red")
-            obj.style.border = "2px solid black";
+function checkexpmonth() {
+
+    if (parseInt(document.getElementById("expmonth").value)>=1&&parseInt(document.getElementById("expmonth").value)<=12){
+        return true;
     }
-
-   function Msg(TxtColor,Text,timer,obj) 
-   {   
-       document.getElementById("invalid-details").style.color=TxtColor;
-       document.getElementById("invalid-details").innerHTML=Text;
-       setTimeout(function(){
-           document.getElementById("invalid-details").innerHTML="";
-           removeRedBorder(obj);
-       },timer);
-   }
-
-   function validate_creditcardnumber()
-    {
-            var re16digit = /^\d{16}$/
-            if (document.myform.text1.value.search(re16digit) == -1){
-                document.getElementById("ccnum").style.border = "3px solid red";  
-                Msg("red","Entered detail is half completed or invalid !",3000,document.myform.text1);
-                return true;
-            }
-            else
-            {
-                //document.getElementById("ccnum").style.border = "3px solid green";
-                return false;
-            }
-    } 
-    function check() {
-        email = document.getElementById("email").value;
-        filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (filter.test(email)) 
-        {
-            //document.getElementById("email").style.border = "3px solid green";  
-            return true;
-        }
-        else
-        {
-            document.getElementById("email").style.border = "3px solid red";
-            Msg("red","Entered detail is half completed or invalid !",3000,document.getElementById("email"));
-            return false;
-        }
+    else {
+        return false;
     }
-    function checkcvv(){
-        var re3digit = /^\d{3}$/
-        if (document.myform.cvv.value.search(re3digit) == -1){
-            document.getElementById("cvv").style.border = "3px solid red";  
-            Msg("red","Entered detail is half completed or invalid !",3000,document.myform.cvv);
-            return false;
-        }
-        else
-        {
-            //document.getElementById("cvv").style.border = "3px solid green";
-            return true;
-        }
-    }
-    function checkzip(){
-        var re6digit = /^\d{6}$/
-        if (document.myform.zip.value.search(re6digit) == -1){
-            document.getElementById("zip").style.border = "3px solid red"; 
-            Msg("red","Entered detail is half completed or invalid !",3000,document.myform.zip); 
-            return false;
-        }
-        else
-        {
-            //document.getElementById("zip").style.border = "3px solid green";
-            return true;
-        }
-    }
+}
 
-    function checkexpyear(){
-        var re4digit = /^\d{4}$/
-        if (document.myform.expyear.value.search(re4digit) == -1){
-            document.getElementById("expyear").style.border = "3px solid red"; 
-            Msg("red","Entered detail is half completed or invalid !",3000,document.myform.expyear); 
-            return false;
-        }
-        else
-        {
-            document.getElementById("expyear").style.border = "3px solid green";
-            return true;
-        }
-    }
-
+function checkexpyear() {
     
+    let curDate = new Date();
+    let year = curDate.getFullYear();
+    year+=7;
+    
+    if (document.getElementById("expyear").value.length == 4 && parseInt(document.getElementById("expyear").value) <= year && parseInt(document.getElementById("expyear").value) >= curDate.getFullYear() ) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function validate_creditcardnumber() {
+
+    if (document.getElementById("ccnum").value.length == 16) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function checkCvv()
+{
+    if(parseInt(document.getElementById("Cvv").value) >=1 && parseInt(document.getElementById("Cvv").value) <= 999&&document.getElementById("Cvv").value!=""&&document.getElementById("Cvv").value.length==3) 
+    {  
+        return true;
+    }
+    else {   
+        return false;
+    }
+}
+
+
+function validateName()
+{
+    if(document.getElementById("cname").value!="")
+    return true;
+    else
+    return false;
+}
+
+function validatePaymentDetails() {
+
+    if(validateName()==false)
+    {
+        redBorder(document.getElementById("cname"));
+        Msg("red","Kindly enter name !",3000,document.getElementById("cname"));
+    }
+    else if(validate_creditcardnumber()==false)
+    {   
+        redBorder(document.getElementById("ccnum"));
+        Msg("red","Kindly enter valid card number !",3000,document.getElementById("ccnum"));
+    }
+    else if(checkexpmonth()==false)
+    {   
+        redBorder(document.getElementById("expmonth"));
+        Msg("red","Kindly enter valid expiry month !",3000,document.getElementById("expmonth"));
+    }
+    else if(checkexpyear()==false)
+    {
+        redBorder(document.getElementById("expyear"));
+        Msg("red","Kindly enter valid expiry year !",3000,document.getElementById("expyear"));
+    }
+    else if(checkCvv()==false)
+    {
+        redBorder(document.getElementById("Cvv"));     
+        Msg("red","Kindly enter valid cvv number !",3000,document.getElementById("Cvv"));
+    }
+    else
+    {   
+        document.getElementById("invalid-details").style.color="green";
+        document.getElementById("invalid-details").innerHTML="Generating an OTP...";
+      
+        setTimeout(function(){
+             document.getElementById("invalid-details").innerHTML="";
+             let otp = Math.round(Math.random()*1000+442610);
+             alert("Your OTP is " + otp + " for Paradise hotel room booking. Don't share it with anyone. Please do remember it.");
+             sessionStorage.setItem("OTP",otp);
+             setTimeout(function(){window.open("../HTML/booking-receipt.html",'_self')},500);
+
+            },3000);
+
+         
+    }
+}
+
+function makeFieldEmpty(textField)
+{
+	textField.value="";
+}
+
+function setPage()
+{
+    makeFieldEmpty(document.getElementById("cname"));
+    makeFieldEmpty(document.getElementById("ccnum"));
+    makeFieldEmpty(document.getElementById("expmonth"));
+    makeFieldEmpty(document.getElementById("expyear"));
+    makeFieldEmpty(document.getElementById("Cvv"));
+}

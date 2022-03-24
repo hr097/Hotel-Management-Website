@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Booking Receipt | Hotel Paradise</title>
+
+        <link rel="icon" href="" type="image/icon type">
+        <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon"> <!--ICON-->
+        <link rel="stylesheet" href="../CSS/booking-receipt.css"><!--CSS-->
+        <script src="../JS/booking-receipt.js" type="text/javascript" defer="true"></script><!--JS-->
+
+    <style type="text/css">
+    table tr:nth-child(even){background-color: #f2f2f2;}
+    table tr:hover {background-color: rgb(194, 191, 191);}
+    td
+    {
+      text-align: left;
+      padding:10px;
+      margin:10px;
+      border: 2px solid black;  
+      border-collapse:none;
+    }
+    </style>
+    </head>
+    <body onload="setPage()">
+         <div id="otp-page">
+            <div class="row">
+                <div class="col-75">
+                  <div class="container">
+                    <div class="testbox">
+                    <form name="myform"  action="#">
+                      <center><img style="margin:auto;" src="../IMAGES/hotel-paradise.png"  height="200px" width="200px" alt=""><h1 style="font-size:6vh;margin-bottom:-20px;">Enter Correct OTP to Generate Your Receipt </h1></center>
+                      <br>
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="OTP">OTP (One Time Password): </label>
+                          <input type="text" id="OTP" name="OTP" maxlength="6" minlength="6" placeholder="Enter OTP here" required>
+                        </div>
+                      </div>
+                      <h6 id="invalid-OTP"></h6>
+                      <br>
+                      <div class="btn-block">
+                      <center><button type="button" onclick="validateOTP()">Proceed</button></center>
+                      </div>
+                      </form>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+         </div>
+        <div id="main-body">
+            <div class="row">
+                <div class="col-75">
+                  <div class="container">
+                    <div class="testbox">
+                    <form name="myform"  action="#">
+                      <center><img style="margin:auto;" src="../IMAGES/hotel-paradise.png"  height="175px" width="175px" alt=""><h1 style="font-size:4vh;margin-top:0px;margin-bottom:-20px;">Hotel Room Booking Receipt </h1></center>
+                      <br>
+                      <div class="row">
+                        <div class="col-50">
+                          <h3 style="color:green;font-size:1.1em;text-align:center;margin-top:-15px;">Thank you for choosing us. we won't let you down.</h3>
+                          <label style="text-align:center;font-size:1.3em;background-color: rgb(92, 195, 255);margin:10px;padding:10px;" for="fname">-: Booking Details :-</label>
+                          <!-- <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            <i class="fa fa-cc-paypal" style="color:rgb(36, 20, 179);"></i>
+                          </div>-->
+                          
+                          <center>
+                          <table>
+                          <tr><td>Receipt No    : </td><td id="receiptNo" ></td></tr>
+                          <tr><td>Customer Name     : </td><td id="CusName" ></td></tr>
+                          <tr><td>Customer Email    : </td><td id="CusEmail"></td></tr>
+                          <tr><td>Hotel Venue     : </td><td id="Hotel-Venue"></td></tr>
+                          <tr><td>Package Type    : </td><td id="package-type"></td></tr>
+                          <tr><td>Total Guests    : </td><td id="Guests"></td></tr>
+                          <tr><td>Rooms No    : </td><td id="RoomsNo"></td></tr>
+                          <tr><td>Booked Date     : </td><td id="booking-date"></td></tr>
+                          <tr><td>Booked Time     : </td><td id="booking-time"></td></tr>
+                          <tr><td>Parking Facilities    : </td><td id="park-fac"></td></tr>
+                          <tr><td>Extra Instruction     : </td><td id="ext-ins"></td></tr>
+                          <tr><td>Bill Amount     : </td><td id="bill-amt"></td></tr>
+                          <tr><td>Payment Referenece ID     : </td><td id="pay-ref-no"></td></tr>
+                          </table>
+                          </center>
+                        </div>
+                      </div>
+                      <h6 id="invalid-details"></h6>
+                      <div class="btn-block">
+                      <center><button type="button" id="print-Receipt" onclick="printReceipt()">Print Receipt</button></center>
+                      </div>
+                      </form>
+                    </div>
+                    </div>
+                  </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+     
+    </script>
+    <noscript>Sorry, Your browser does not support JavaScript !!!</noscript>
+</html>

@@ -40,15 +40,15 @@
               <input  id="email" type="email" name="name" placeholder="someone@example.com" />
               <h4>Hotel venue : </h4>
               <select id="hotel-venue">
-                <option value="" selected>Select hotel venue</option>
-                <option value="1">Matheran</option>
-                <option value="2">Kashmir</option>
-                <option value="3">Mumbai</option>
-                <option value="4">Surat</option>
-                <option value="5">Kerala</option>
-                <option value="6">Diu</option>
-                <option value="7">Rajasthan</option>
-                <option value="8">Chennai</option>
+                <option value="" selected>Select Hotel Venue</option>
+                <option value="Matheran">Matheran</option>
+                <option value="Kashmir">Kashmir</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Surat">Surat</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Diu">Diu</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Chennai">Chennai</option>
               </select>
               <h4>Packages :</h4>
               <select id="packageType" onchange="setAmt()">
@@ -57,7 +57,7 @@
                 <option value="3">Delux</option>
                 <option value="4">Platinum</option>
               </select>
-              <h4>No. of rooms : </h4>
+              <h4>Number of rooms : </h4>
               <select id="numOfRooms" onchange="setAmt()">
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
@@ -65,17 +65,17 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <h4>No. of Guests : </h4>
+              <h4>Number of Guests : </h4>
               <select id="noOfGuests">
-                <option value="" selected>select number of guests</option>
+                <option value="" selected>Select Number of Guests</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-                <option value="5+">More than 5</option>
+                <option value="5+ ( Maximum 10 per room)">More than 5</option>
               </select>
-              <h4>Date to be booked : </h4>
+              <h4>Date to be Booked : </h4>
               <div class="day-visited">
                 <input onblur="setMinBookTime()" type="date" id="booking-date" name="dayvisited" required/>
                 <i class="fas fa-calendar-alt"></i>
@@ -91,11 +91,11 @@
               </div>
               <h4>Tax (12%) : </h4>
               <div class="name">
-                <input id="Tax" type="text" name="taxamount" placeholder="Tax value $" readonly/>
+                <input id="Tax" type="text" name="taxamount" placeholder="Tax value ₹" readonly/>
               </div>
-              <h4>Total Amount : </h4>
+              <h4>Total Payable Amount : </h4>
               <div class="name">
-                <input id="totalamount" type="text" name="totalamount" placeholder="Total amount $" readonly/>
+                <input id="totalamount" type="text" name="totalamount" placeholder="Total amount ₹" readonly/>
               </div>
                <!-- <h4>Untitled</h4>
               <table>

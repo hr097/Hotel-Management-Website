@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Payment | Hotel Paradise</title>
 
-
-
 <link rel="stylesheet" href="../CSS/payment.css"><!--CSS-->
 <script src="../JS/payment.js" type="text/javascript" defer="true"></script> <!--JS-->
-<link rel="shortcut icon" href="IMAGES/hotel-paradise.png" type="image/x-icon"> <!--ICON-->
+<link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon"> <!--ICON-->
 
 <!-- <link rel="stylesheet" href="../CSS/booking.css"> -->
 <!-- <script src="../JS/booking.js" type="text/javascript" defer="true"></script>
@@ -19,8 +17,7 @@
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> BOOTSTRAP -->
 
 </head>
-<body>
-
+<body onload="setPage()">
 
 <div class="row">
   <div class="col-75">
@@ -30,11 +27,8 @@
         <center><img style="margin:auto;" src="../IMAGES/hotel-paradise.png"  height="200px" width="200px" alt=""><h1 style="font-size:6vh;margin-bottom:-20px;">Make a Successful Payment and your Room will be Booked. </h1></center>
         <br>
         <div class="row">
-          
-
           <div class="col-50">
-
-            <h3 style="color:green;font-size:0.8em;text-align:center">*We accept online payments through debit/credit cards only.</h3>
+            <h3 style="color:green;font-size:1em;text-align:center">*We accept online payments through debit/credit cards only.</h3>
             <label style="text-align:center;font-size:1.3em;" for="fname">-: Accepted Cards :-</label>
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -46,31 +40,26 @@
             <label for="cname">Name on card : </label>
             <input type="text" id="cname" name="cardname" placeholder="Enter name" required>
             <label for="ccnum"> Card number :</label>
-            <input type="text" id="ccnum" name='text1' placeholder="XXXX - XXXX - XXXX - XXXX" onchange="validate_creditcardnumber()">
+            <input type="text" id="ccnum" maxlength="16" minlength="16" name='text1' placeholder="XXXX - XXXX - XXXX - XXXX" >
             <label for="expmonth">Expiry month :</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="e.g. 08" required>
-            <label for="expyear">Exp Year</label>
-            <input type="text" id="expyear" name="expyear" placeholder="e.g. 2025" required onchange="checkexpyear()">
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv" placeholder="XXX" onchange="checkcvv()">
-    
+            <input type="text" id="expmonth" maxlength="2" minlength="1" name="expmonth" maxlength="4" minlength="4" placeholder="e.g. 08"  required>
+            <label for="expyear">Exp Year : </label>
+            <input type="text" id="expyear" maxlength="4" minlength="4" name="expyear" placeholder="e.g. 2025" required >
+            <label for="Cvv">CVV : </label>
+            <input type="text" id="Cvv" name="Cvv Number" maxlength="3" minlength="3" placeholder="XXX" required>
           </div>
           
         </div>
         <h6 id="invalid-details"></h6>
         <div class="btn-block">
-        <center><button type="button">Pay Now</button></center>
+        <center><button type="button" onclick="validatePaymentDetails()">Pay Now</button></center>
         </div>
-  
+        </form>
       </div>
       </div>
-      </form>
     </div>
   </div>
   
-</div>
-</div>
-
 </body>
 </html>
 

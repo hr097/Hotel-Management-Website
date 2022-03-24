@@ -204,7 +204,7 @@ function checkAccount()
 	}
 	else if(checkPassword(document.getElementById("Password_signup").value)==false)
 	{
-		Msg("red","Password must be 8 charecter long and having atleast 1 uppercase & lowercase letter with least 1 digit & 1 special charecter ! e.g. Abc@$234",4000);
+		Msg("red","Password must be 8 character long and having atleast 1 uppercase & lowercase letter with least 1 digit & 1 special character ! e.g. Abc@$234",4000);
 	}
 	else if(localStorage.getItem('Name')==undefined && localStorage.getItem('Email')==undefined && localStorage.getItem('Password')==undefined)
 	{    
@@ -255,7 +255,7 @@ function resetAccount()
 	}
 	else if(checkPassword(document.getElementById("Password_forgot").value)==false)
 	{
-		Msg2("red","Password must be 8 charecter long and having atleast 1 uppercase & lowercase letter with least 1 digit & 1 special charecter ! e.g. Abc@$234",4000);
+		Msg2("red","Password must be 8 character long and having atleast 1 uppercase & lowercase letter with least 1 digit & 1 special character ! e.g. Abc@$234",4000);
 	}
 	else if(confirm("Are you sure you want to reset your account details ?"))
 	{
