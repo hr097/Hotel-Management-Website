@@ -1,36 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Forgot Creditionals | Hotel Paradise</title>
-        <meta name="auhtor" content="harshil ramani" >
-        <meta name="key words" content="Hotel-Room,Booking,Online,Best-Quality,Best-Service,India,Tour,5 Star,Food-Facilities" >
-        <meta name="description" content="This Website is for online Hotel Room Booking ." >
-        <meta name="viewport" content="width=device-width,intial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="refresh" content="120">
 
-        <link rel="stylesheet" href="../CSS/index.css">
-        <script src="../JS/index.js" type="text/javascript" defer="true"></script>
-        <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon">
-    </head>
+<head>
+    <title>Forgot Creditionals | Hotel Paradise</title>
+    <meta name="auhtor" content="harshil ramani">
+    <meta name="key words"
+        content="Hotel-Room,Booking,Online,Best-Quality,Best-Service,India,Tour,5 Star,Food-Facilities">
+    <meta name="description" content="This Website is for online Hotel Room Booking .">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="120">
 
-    <body onload="setPage()">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="../JS/index.js" type="text/javascript" defer="true"></script>
+    <link rel="shortcut icon" href="../IMAGES/hotel-paradise.png" type="image/x-icon">
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
 
-      <div class="container" id="container">
+            body {
+                font-size: 0.8em;
+            }
+
+            .hotel-icon1{
+                margin-top: -50px;
+                max-height: 150px;
+                max-width: 150px;
+                min-height: 150px;
+                min-width: 150px;
+            }
+            .forgot-icon {
+                margin-top: -50px;
+                max-height: 80px;
+                max-width: 100px;
+                min-height: 80px;
+                min-width: 100px;
+            }
+            
+            #rem {
+                font-size: 0.8em
+            }
+
+            #remember-me {
+                margin-left: -10px;
+                height: 7px;
+                width: 7px;
+            }
+
+            #len {
+                margin-top: 40px;
+            }
+            #abc
+            {
+                margin-top:30px;
+            }
+            
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 280px) {
+            body {
+                font-size: 0.5em;
+            }
+
+            .hotel-icon1{
+                margin-top: -50px;
+                max-height: 150px;
+                max-width: 150px;
+                min-height: 150px;
+                min-width: 150px;
+            }
+            .forgot-icon {
+                margin-top: -50px;
+                max-height: 80px;
+                max-width: 100px;
+                min-height: 80px;
+                min-width: 100px;
+            }
+
+            #rem {
+                font-size: 0.5em
+            }
+
+            #remember-me {
+                margin-left: -10px;
+                height: 4px;
+                width: 4px;
+            }
+            #abc
+            {
+                margin-top:30px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {}
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            body {
+                font-size: 1.5em;
+            }
+
+            .hotel-icon1{
+                margin-top: -50px;
+                max-height: 150px;
+                max-width: 150px;
+                min-height: 150px;
+                min-width: 150px;
+            }
+            .forgot-icon {
+                margin-top: -50px;
+                max-height: 80px;
+                max-width: 100px;
+                min-height: 80px;
+                min-width: 100px;
+            }
+
+            #rem {
+                font-size: 0.8em;
+            }
+
+            #remember-me {
+                margin-left: -10px;
+                height: 15px;
+                width: 15px;
+            }
+            #abc
+            {
+                margin-top:30px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {}
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {}
+    </style>
+</head>
+
+<body onload="setPage()">
+
+    <div class="container" id="container">
         <div class="form-container sign-in-container">
-		<form action="#">
-            <img class="forgot-icon" src="../IMAGES/forgot-password.png" alt="">
-			<h3 style="margin-bottom: 20px;">Forgot Login Creditionals ?</h3>
-			<span style="font-size: 0.55em;margin-bottom:20px;">Don't worry you can reset your account  creditionals.</span>
-			<input type="text" id="Name_forgot" autocomplete="on" placeholder="Name" autofocus="true" required/>
-			<input type="email" id="Email_forgot" autocomplete="on" placeholder="Email" required/>
-			<input type="password" id="Password_forgot" autocomplete="on" placeholder="Password" required/>
-            <a href="../index.html" style="margin-bottom:20px;"target="_self">Login | Sign Up ?</a>
-			<button type="button" onclick="resetAccount()">Reset</button>
-            <h6 id="account_reset"></h6>
+            <form action="#">
+                <img class="forgot-icon" src="../IMAGES/forgot-password.png" alt="">
+                <h3 id="abc" style="margin-bottom: 20px;">Forgot Login Creditionals ?</h3>
+                <span style="font-size: 0.55em;margin-bottom:20px;">Don't worry you can reset your account
+                    creditionals.</span>
+                <input type="text" id="Name_forgot" autocomplete="on" placeholder="Name" autofocus="true" required />
+                <input type="email" id="Email_forgot" autocomplete="on" placeholder="Email" required />
+                <input type="password" id="Password_forgot" autocomplete="on" placeholder="Password" required />
+                <a href="../index.html" style="margin-bottom:20px;" target="_self">Login | Sign Up ?</a>
+                <button type="button" onclick="resetAccount()">Reset</button>
+                <h6 id="account_reset"></h6>
 
-		</form>
-	</div>
+            </form>
+        </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-right">
@@ -40,18 +165,17 @@
             </div>
         </div>
 
-      </div>
+    </div>
 
-    </body>
-    
-    <script type="text/javascript">
-      function setPage()
-      {
+</body>
+
+<script type="text/javascript">
+    function setPage() {
         makeFieldEmpty(document.getElementById("Name_forgot"));
-		makeFieldEmpty(document.getElementById("Email_forgot"));
-		makeFieldEmpty(document.getElementById("Password_forgot"));
-      }
-    </script>
-    <noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
-</html>
+        makeFieldEmpty(document.getElementById("Email_forgot"));
+        makeFieldEmpty(document.getElementById("Password_forgot"));
+    }
+</script>
+<noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
 
+</html>
