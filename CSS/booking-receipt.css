@@ -9,16 +9,13 @@
             }
             *
             {
-                font-family: 'SF Pro';
+                font-family: 'SF Pro','Poppins','sans-serif';
+                box-sizing: border-box;
             }
             /*--------------------------------------------------*/
             body {
             font-size: 17px;
-            
-            }
-            
-            * {
-            box-sizing: border-box;
+            font-family: "SF Pro","Poppins","Sans-serif";
             }
             
             .row { 

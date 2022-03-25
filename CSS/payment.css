@@ -9,12 +9,12 @@ src: url('..\\FONTS\\SF pro\\SFPRODISPLAYBOLD.OTF');
 }
 *
 {
-    font-family: 'SF Pro';
+    font-family: 'SF Pro','Poppins','sans-serif';
 }
 /*--------------------------------------------------*/
 body {
 font-size: 17px;
-
+font-family: 'SF Pro','Poppins','sans-serif';
 }
 
 * {

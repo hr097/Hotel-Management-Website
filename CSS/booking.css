@@ -3,6 +3,7 @@ body
 {
 min-height: 100%;
 background-color:rgb(82, 185, 253);
+font-family: 'SF Pro','Poppins','sans-serif';
 }
 body, div, form, input, select { 
 padding: 0;
