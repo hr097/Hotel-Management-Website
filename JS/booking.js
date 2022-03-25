@@ -41,20 +41,20 @@ function setAmt() {
     let totalamt = document.getElementById('totalamount');
 
     if (pckgType == 1) {
-        tax.value = ((1999 * parseInt(numofRooms.value)) * 12 / 100) + " ₹";
-        totalamt.value = (1999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " ₹";;
+        tax.value = ((1999 * parseInt(numofRooms.value)) * 12 / 100) + " (Rupees)";
+        totalamt.value = (1999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " (Rupees)";;
     }
     else if (pckgType == 2) {
-        tax.value = ((3999 * parseInt(numofRooms.value)) * 12 / 100) + " ₹";
-        totalamt.value = (3999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " ₹";;
+        tax.value = ((3999 * parseInt(numofRooms.value)) * 12 / 100) + " (Rupees)";
+        totalamt.value = (3999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " (Rupees)";;
     }
     else if (pckgType == 3) {
-        tax.value = (10999 * parseInt(numofRooms.value)) * 12 / 100 + " ₹";
-        totalamt.value = (10999 * parseInt(numofRooms.value)) + parseInt(tax.value) + "₹";;
+        tax.value = (10999 * parseInt(numofRooms.value)) * 12 / 100 + " (Rupees)";
+        totalamt.value = (10999 * parseInt(numofRooms.value)) + parseInt(tax.value) + "(Rupees)";;
     }
     else if (pckgType == 4) {
-        tax.value = (15999 * parseInt(numofRooms.value)) * 12 / 100 + " ₹";
-        totalamt.value = (15999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " ₹";
+        tax.value = (15999 * parseInt(numofRooms.value)) * 12 / 100 + " (Rupees)";
+        totalamt.value = (15999 * parseInt(numofRooms.value)) + parseInt(tax.value) + " (Rupees)";
     }
 
 }
