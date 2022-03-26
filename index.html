@@ -33,7 +33,7 @@
 	}
 	#rem
 	{
-		font-size:0.8em
+		font-size:1em;
 	}
 	#remember-me
 	{
@@ -41,6 +41,10 @@
 		height:7px;
 		width:7px;
 	}
+	#account,#invalid-id-password
+    {
+                font-size: 1em;
+    }
 	#len
 	{
 		margin-top: 40px;
@@ -63,13 +67,38 @@
 	}
 	#rem
 	{
-		font-size:0.5em
+		font-size:1em;
 	}
 	#remember-me
 	{
 		margin-left:-10px;
-		height:4px;
-		width:4px;
+		height:12px;
+		width:12px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	body
+	{
+		font-size:0.5em;
+	}
+    .hotel-icon 
+	{
+	margin-top:-50px;
+	max-height:150px;
+	max-width:150px;
+	min-height:150px;
+	min-width:150px;
+	}
+	#rem
+	{
+		font-size:1em;
+	}
+	#remember-me
+	{
+		margin-left:-10px;
+		height:7px;
+		width:7px;
 	}
 }
 
@@ -93,13 +122,13 @@
 	}
 	#rem
 	{
-		font-size:0.8em;
+		font-size:1em;
 	}
 	#remember-me
 	{
 		margin-left:-10px;
-		height:15px;
-		width:15px;
+		height:12px;
+		width:12px;
 	}
 }
 
@@ -138,7 +167,7 @@
 			<input type="email" placeholder="Email" autcomplete="on" id="Email_signin" autofocus="true" required/>
 			<input type="password" placeholder="Password" autcomplete="on" id="Password_signin" required/>
 			<div style="display: inline-block;">
-			<input style="margin-left:-10px;height:12px;width:12px;" type="checkbox"id="remember-me"/>
+			<input style="margin-left:-10px;" type="checkbox"id="remember-me"/>
 			<a  id="rem" style="font-size:0.5em;">Remember me</a>
 			</div>
 			<a style="margin-bottom:25px;margin-top:10px;font-size:0.45em" href="HTML/forgot-creditionals.html" target="_self">Forgot your Email/Password ?</a>

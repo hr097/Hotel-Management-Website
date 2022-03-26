@@ -26,10 +26,10 @@ color: red;
 display: flex;
 justify-content: center;
 align-items: center;
-height:inherit;
+height:100%;
 margin:auto;
-width:1200px;
-border:5px solid black;
+width:100%;
+overflow-x: hidden;
 }
 form {
 width: 100%;

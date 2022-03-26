@@ -1,16 +1,18 @@
 var countOTP = 0;
 function setPage()
 {   
-    document.getElementById("main-body").style.display="none"; 
-    
+    document.getElementById("main-body").style.display="none";
 }
 
 function printReceipt()
 {
   document.getElementById("invalid-details").style.display="none";
   document.getElementById("print-Receipt").style.display="none";
-  var i;
-  setTimeout(function(){ i=window.print();document.getElementById("print-Receipt").style.display="inline-block";},100);
+  setTimeout(function(){
+      window.print();
+      document.getElementById("print-Receipt").style.display="block";
+  },100);
+
 }
 function hideOtpPage()
 {
